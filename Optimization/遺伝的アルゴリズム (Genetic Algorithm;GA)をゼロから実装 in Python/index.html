@@ -1,0 +1,1241 @@
+
+<!doctype html>
+<html lang="ja" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../Latin%20Hypercube%20Sampling%20%28LHS%29%20%E3%81%AE%E7%90%86%E8%AB%96%E3%81%A8%E6%9C%89%E7%94%A8%E6%80%A7/">
+      
+      
+        <link rel="next" href="../../tag_list/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>遺伝的アルゴリズム (Genetic Algorithm;GA)をゼロから実装 in Python - GooBitGitKome's Portfolio</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          コンテンツにスキップ
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="ヘッダー">
+    <a href="../.." title="GooBitGitKome&#39;s Portfolio" class="md-header__button md-logo" aria-label="GooBitGitKome's Portfolio" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            GooBitGitKome's Portfolio
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              遺伝的アルゴリズム (Genetic Algorithm;GA)をゼロから実装 in Python
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="検索" placeholder="検索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="検索">
+        
+        <button type="reset" class="md-search__icon md-icon" title="クリア" aria-label="クリア" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            検索を初期化
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="タブ" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../Latin%20Hypercube%20Sampling%20%28LHS%29%20%E3%81%AE%E7%90%86%E8%AB%96%E3%81%A8%E6%9C%89%E7%94%A8%E6%80%A7/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Optimization
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../tag_list/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Tag List
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="ナビゲーション" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="GooBitGitKome&#39;s Portfolio" class="md-nav__button md-logo" aria-label="GooBitGitKome's Portfolio" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    GooBitGitKome's Portfolio
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Optimization
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Optimization
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Latin%20Hypercube%20Sampling%20%28LHS%29%20%E3%81%AE%E7%90%86%E8%AB%96%E3%81%A8%E6%9C%89%E7%94%A8%E6%80%A7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Latin Hypercube Sampling (LHS) の理論と有用性
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    遺伝的アルゴリズム (Genetic Algorithm;GA)をゼロから実装 in Python
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    遺伝的アルゴリズム (Genetic Algorithm;GA)をゼロから実装 in Python
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        はじめに
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ga" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GAの仕組み
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="GAの仕組み">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        初期集団の生成
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        次世代の生成
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="次世代の生成">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        選択 (Selection)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="選択 (Selection)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ルーレット法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        トーナメント法
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crossover" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        交叉 (Crossover)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="交叉 (Crossover)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#blx-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BLX-α
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        世代交代モデル
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="世代交代モデル">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        エリート戦略
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#minimal-generation-gap-mgg" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Minimal Generation Gap (MGG)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        適応度の評価
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tag_list/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tag List
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        はじめに
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ga" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GAの仕組み
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="GAの仕組み">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        初期集団の生成
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        次世代の生成
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="次世代の生成">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        選択 (Selection)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="選択 (Selection)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ルーレット法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        トーナメント法
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crossover" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        交叉 (Crossover)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="交叉 (Crossover)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#blx-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BLX-α
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        世代交代モデル
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="世代交代モデル">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        エリート戦略
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#minimal-generation-gap-mgg" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Minimal Generation Gap (MGG)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        適応度の評価
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <nav class="md-tags" >
+    
+      
+      
+      
+      
+        <a href="../../tag_list/#tag:ga" class="md-tag">GA</a>
+      
+    
+      
+      
+      
+      
+        <a href="../../tag_list/#tag:python" class="md-tag">Python</a>
+      
+    
+      
+      
+      
+      
+        <a href="../../tag_list/#tag:optimization" class="md-tag">optimization</a>
+      
+    
+  </nav>
+
+
+
+  <h1>遺伝的アルゴリズム (Genetic Algorithm;GA)をゼロから実装 in Python</h1>
+
+<h2 id="_1">はじめに</h2>
+<p>近年のGPUやCPUの高性能化に伴いCAEなどのシミュレーション分野の需要がますます増加してきた。しかし、解析の需要に対し、人の手作業による解析作業の見直しは需要に対して比例していないように見える。一度の解析で数時間〜数日以上の単位で時間がかかる上、パラメータ調整は人の感覚によるところが多い現実がある。そういった面倒なパラメータ調整を自動化する手法の一つに遺伝的アルゴリズム (Genetic Algorithm;GA) がある。GAとは、生物の進化（選択、交叉、突然変異）を模した最適化手法であれば、パラメータ調整をユーザーが指定した範囲で自動的に割り当てをおこないつつ、解析ソルバーを自動的に走らせ、あらかじめターゲット（目標）とする変数をしておくことで、自動的な評価まで行うことができる。この一連の流れを世代と言われる単位で集団を継承しつつ変異を繰り返すものである。</p>
+<p>本稿のGAは、以下のようにアレンジしてある：
+- 実数値GA（Real-coded genetic algorithm)を想定している。
+- ソルバーとして、Scikit-learnで作成した応答局面モデルを使用し、ターゲット変数の値を得る。
+    - 膨大な計算量をかけて高精度の結果を得られるソルバーに対し、その全てをソルバーで補うことは非効率であることが問題として挙げられる。そこで応答局面とソルバーとのハイブリッドGAの提案を行いたいが、先行研究を見つけたので、後々実装をしたいと考えている[9]
+- 複数ターゲット変数を対象とできるように、最終的な評価に残差平方和を使用しており、最終的には単目的GAとして動作する。
+- 突然変異の代わりに、世代交代モデル（エリートやMGGなど）を採用している。</p>
+<blockquote>
+<p>[!caution]
+現在編集中ですので、随時更新していきます。(2026/04/11)</p>
+</blockquote>
+<h2 id="ga">GAの仕組み</h2>
+<p>GAは1975年にHolland氏によって考案された手法で、以下の図のような流れに沿って適応を繰り返し、最適化に近づいていく。</p>
+<pre class="mermaid"><code>graph LR 
+    Start([初期集団生成]) --&gt; Eval[適合度評価] 
+    Select --&gt; Cross[交叉] 
+    Cross --&gt; Mut[突然変異] 
+    Mut --&gt; Eval
+    Eval --&gt; Cond{終了条件}
+    Cond -- No --&gt;  Select
+    Cond -- Yes --&gt; End([終了])</code></pre>
+<ol>
+<li>初期集団（第0世代）の生成<ul>
+<li>あらかじめ決めた個体数（N）個体が含まれる集団をランダムに生成する。（初期集団）</li>
+</ul>
+</li>
+<li>適応度の評価<ul>
+<li>各個体に対して評価関数を使用して評価を計算する</li>
+</ul>
+</li>
+<li>終了条件を判定する（世代交代の終了や、適応度が一定以上あるなど）<ul>
+<li>Yes -&gt; 終了</li>
+<li>No -&gt; 次世代集団の生成</li>
+</ul>
+</li>
+<li>次世代の生成(世代交代モデルによって違いが出る)<ol>
+<li>生成されていた前世代から親を”選択”する</li>
+<li>選択された親を元に”交叉”い新たな個体を生成する</li>
+<li>交差された個体に”突然変異”を行う</li>
+</ol>
+</li>
+<li>1-4を繰り返す</li>
+</ol>
+<p>次に、個別に1〜3のプロセスについて説明を行う。順序が異なるが2の適応度の評価に関する説明は最後に行う。</p>
+<h3 id="_2">初期集団の生成</h3>
+<p>まずは、初期集団（第0世代）の生成にではGAの出発地点を決める重要なフェーズであり、偏りのある質の低い個体を使用してしまうことで、最適化への収束が悪くなったり、最適解を見つけることができなかったりする。</p>
+<p>そのため、探索空間全体を探索するために分布した個体を生成することで、局所解ではなく、最適解を見つけることに近づくことができる。
+また、無駄な計算を避けることで、ソルバーで時間のかかる計算をしてしまい、リソースと時間を効率化することもできる。</p>
+<p>良質な個体を作るために、[[Latin Hypercube Sampling (LHS) の理論と有用性]]などが挙げられる。
+これは別ページで解説する。</p>
+<h3 id="_3">次世代の生成</h3>
+<h4 id="selection">選択 (Selection)</h4>
+<p>GAでは交叉や対象と選択するというプロセスが何度も生じる。そのときに、一様分布したランダム関数では、個体差を恣意的に作り出すことができない。そのような選択に”差”を作るための手法が様々提唱されているので以下に紹介する。</p>
+<h5 id="_4">ルーレット法</h5>
+<p>よく、ゲームのルーレットを選択する方法として表現される。それぞれの個体の評価値に基づいて円グラフ上に割り当てがされる。
+しかし、評価値が良好な個体ほど選択されやすく、そうでない個体は選択されにくいランク付けがされる[3]。</p>
+<p>以下に簡単な例を提示する。
+以下のテーブルがあり、評価が最も良い個体を優良個体としたときの例である。</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>個体</th>
+<th>評価</th>
+<th>累積和</th>
+<th>確率（評価値/累積和の結果）</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>A</td>
+<td>10</td>
+<td>10</td>
+<td>0.04</td>
+<td></td>
+</tr>
+<tr>
+<td>1</td>
+<td>B</td>
+<td>40</td>
+<td>50</td>
+<td>0.16</td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>C</td>
+<td>30</td>
+<td>80</td>
+<td>0.12</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>D</td>
+<td>20</td>
+<td>100</td>
+<td>0.08</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>E</td>
+<td>100</td>
+<td>200</td>
+<td>0.4</td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>F</td>
+<td>50</td>
+<td>250</td>
+<td>0.2</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>ルーレット選択：個体別占有率（選択確率）</strong>
+<pre class="mermaid"><code>pie
+    "個体A (評価:10)" : 0.04
+    "個体B (評価:40)" : 0.16
+    "個体C (評価:30)" : 0.12
+    "個体D (評価:20)" : 0.08
+    "個体E (評価:100)" : 0.4
+    "個体F (評価:50)" : 0.2</code></pre></p>
+<p>ただし、ルーレット法には、特定の個体だけが選択されやすく、局所解に陥りやすい欠点がある。
+また、このルーレット法を改善したものにランキング法がある。</p>
+<h5 id="_5">トーナメント法</h5>
+<p>トーナメント法は、非常にシンプルで、トーナメントサイズkを指定し、k個を現在の集団からランダムに選択する。その中から最も評価の良い個体を選択する。この操作を任意の回数繰り返す手法である。トーナメントサイズkは2に設定されることが多い[4]。</p>
+<h4 id="crossover">交叉 (Crossover)</h4>
+<p>交叉とは、複数の親子対を掛け合わせることで、新たな個体を生成することを指す。BLX-α、SPX、REXなどの手法が代表的である。</p>
+<h5 id="blx-">BLX-α</h5>
+<p>GAの交叉において、複数パラメータを持つ個体同士を掛け合わせる際、標準的に用いられる手法の一つが <strong>BLX-<span class="arithmatex">\(\alpha\)</span></strong> である。
+この手法は、親となる2つの個体が持つパラメータの間だけでなく、その周辺領域まで探索範囲を広げる点に特徴がある。</p>
+<p>交叉させる2つの親個体を <span class="arithmatex">\(P_1, P_2\)</span> とします。それぞれの個体は <span class="arithmatex">\(n\)</span> 個のパラメータを持つベクトルとして表される。</p>
+<div class="arithmatex">\[P_1 = (p_1^1, \dots, p_n^1), \quad P_2 = (p_1^2, \dots, p_n^2)\]</div>
+<p>このとき、BLX-<span class="arithmatex">\(\alpha\)</span> は2つの子個体 <span class="arithmatex">\(C_k = (c_1^k, \dots, c_n^k) \quad (k=1,2)\)</span> を生成する。各次元のパラメータ <span class="arithmatex">\(c_i^k\)</span> は、以下の手順で決定される。</p>
+<p>各パラメータ <span class="arithmatex">\(i\)</span> において、2つの親のパラメータ値から最大値 <span class="arithmatex">\(p_{\max}\)</span>、最小値 <span class="arithmatex">\(p_{\min}\)</span>、およびその差（距離） <span class="arithmatex">\(d\)</span> を求める。</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(p_{\max} = \max \{p_i^1, p_i^2\}\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(p_{\min} = \min \{p_i^1, p_i^2\}\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(d = p_{\max} - p_{\min}\)</span></p>
+</li>
+</ul>
+<p>ハイパーパラメータ <span class="arithmatex">\(\alpha\)</span> を用いて、探索範囲を親の距離 <span class="arithmatex">\(d\)</span> の <span class="arithmatex">\(\alpha\)</span> 倍だけ外側に拡張する。
+また、ハイパーパラメータ　<span class="arithmatex">\(\alpha\)</span> は一般的に、0.5が良いと言われているが、場合によっては0.3の方が良い場合がある[6]。</p>
+<ul>
+<li><strong>探索区間</strong>: <span class="arithmatex">\([p_{\min} - \alpha d, \ p_{\max} + \alpha d]\)</span></li>
+</ul>
+<p>この拡張された区間内から、一様乱数によってランダムに新しいパラメータ値を選択します。</p>
+<div class="arithmatex">\[c_i^k \sim \text{Uniform}(p_{\min} - \alpha d, \ p_{\max} + \alpha d)\]</div>
+<h4 id="_6">世代交代モデル</h4>
+<p>GAにおいて重要になってくるのが、交叉と淘汰をどのようにコントロールするかである。上記で説明した選択法、交叉法を使用し、それらをシステムとして落とし込んだものが世代交代モデルである。代表的なものに、エリート戦略、Minimal Generation Gap (MGG)である。</p>
+<h5 id="_7">エリート戦略</h5>
+<p>エリート戦略とは、現世代の最良個体（エリートサイズk個）を必ず次世代に継承させる。選択法にはトーナメント法、ルーレット法、ランキング法が使われる[7]。世代交代のフローは以下の図のように行われる。</p>
+<pre class="mermaid"><code>graph TD
+   Start([初期集団の生成]) --&gt; Eval[適合度の評価]
+   Eval --&gt; Stop{収束条件を満たすか?}
+   Stop -- No --&gt; Elite[エリート個体の選抜・保存]
+   Stop -- Yes --&gt; End([最適解の出力])
+   Elite --&gt; Select[選択: 次世代の親を選ぶ]
+   Select --&gt; Replace[次世代集団の形成]
+   Replace --&gt; Recover[保存していたエリートを戻す次世代集団とする]
+   Recover --&gt; Eval</code></pre>
+<p>ただし弱点として、恣意的に優良個体を次世代に入れることにより、最適解の早期収束が起こり、局所解に陥りやすい。</p>
+<h5 id="minimal-generation-gap-mgg">Minimal Generation Gap (MGG)</h5>
+<p>MGGの選択法にはルーレットの方が選択される。探索序盤における選択圧を下げ、初期収束を回避する。また、後半の集団内にて多様な個体を生存させやすく進化的停滞を抑制することが意図されたモデルである[8]。</p>
+<p>詳しいフローは以下のとおりである。</p>
+<pre class="mermaid"><code>graph TD
+   Start([初期集団の生成]) --&gt; Eval[適合度の評価]
+   Eval --&gt; Stop{収束条件を満たすか?}
+   Stop -- Yes --&gt; End([最適解の出力])
+   Stop -- No --&gt; FirstSelect[現世代からランダムに2個体選択し集団Cとし、その個体を差し引かれた親集団をPとする]
+   FirstSelect --&gt; X[選択された2個体からt個体生成し集団C'とする]
+   X --&gt; SecondSelect[集団CとC'の中から最良個体を1つ選択し、Pに戻す]
+   SecondSelect --&gt; ThirdSelect[集団CとC'の中から確率的に1個体選択肢、Pに戻し、Pを次世代集団とする]
+   ThirdSelect --&gt; Eval</code></pre>
+<h3 id="_8">適応度の評価</h3>
+<p>残差平方和は、統計学や機械学習において、モデルの予測値と実際の観測値の誤差を定量化する指標である。</p>
+<p>実測値を <span class="arithmatex">\(y_i\)</span>、モデルによる予測値を <span class="arithmatex">\(\hat{y}_i\)</span> とすると、RSSは以下の式で定義される：</p>
+<div class="arithmatex">\[RSS = \sum_{i=1}^{n} (y_i - \hat{y}_i)^2\]</div>
+<p>RSSの値が小さければ小さいほど良質な個体とここでのGAでは定義する。</p>
+<p>問題点として、複数のターゲット変数がある場合に、ある一つのターゲットだけ、過学習が進んでしまうと、他のターゲット変数の評価が甘くなり、ターゲット変数全体を改善したい場合などにノイズとなり得る。</p>
+<h2 id="references">References</h2>
+<p>[1] kanekanekaneko, “遺伝的アルゴリズムの代表的な選択方式の紹介およびそれらの性質について,” <em>Qiita</em>, Jun. 12, 2025. https://qiita.com/kanekanekaneko/items/1c563ece591fd2ba2127 (accessed Apr. 04, 2026).</p>
+<p>[2] 化学とインフォマティクスと時々雑記, “【初心者向け】遺伝的アルゴリズムについてわかりやすく解説,” <em>化学とインフォマティクスと時々雑記</em>, Sep. 03, 2024. https://boritaso-blog.com/genetic_algorithm/ (accessed Apr. 04, 2026).</p>
+<p>[3]　“Algorithms in Nature Genetic algorithms.” Available: https://www.cs.cmu.edu/~02317/slides/lec_8.pdf</p>
+<p>‌[4] D. Goldberg and K. Deb, “A Comparative Analysis of Selection Schemes Used in Genetic Algorithms.” Available: https://www.cse.unr.edu/~sushil/class/gas/papers/Select.pdf</p>
+<p>[5]　小野 功, 山村 雅幸, and 喜多 一, “実数値GAとその応用,” <em>人工知能</em>, vol. 15, no. 2, pp. 259–266, Mar. 2000, doi: https://doi.org/10.11517/jjsai.15.2_259.</p>
+<p>[6]　F. Herrera, M. Lozano, E. Pérez, A. M. Sánchez, and P. Villar, “Multiple Crossover per Couple with Selection of the Two Best Offspring: An Experimental Study with the BLX-alpha Crossover Operator for Real-Coded Genetic Algorithms.,” <em>Lecture Notes in Computer Science</em>, pp. 392–401, Nov. 2002, doi: https://doi.org/10.1007/3-540-36131-6_40.</p>
+<p>[7]　<em>Algorithmafternoon.com</em>, Apr. 17, 2024. https://algorithmafternoon.com/genetic/elitist_genetic_algorithm/ (accessed Apr. 05, 2026).</p>
+<p>[8] 佐藤 浩, 小野 功, and 小林 重信, “遺伝的アルゴリズムにおける世代交代モデルの提案と評価,” <em>人工知能</em>, vol. 12, no. 5, pp. 734–744, Sep. 1997, doi: https://doi.org/10.11517/jjsai.12.5_734.</p>
+<p>[9] P. Singh, H. Gupta, O. Vinayak, and A. Tyagi, “Application of Response Surface Method and Genetic Algorithm in the Design of High-Efficiency Prototype Vehicle,” 2023. Accessed: Apr. 11, 2026. [Online]. Available: https://arxiv.org/pdf/2311.04308</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  ページトップへ戻る
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.tracking", "search.suggest", "search.highlight", "content.code.copy", "navigation.indexes", "navigation.tags", "content.action.edit", "content.action.view"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version": "\u30d0\u30fc\u30b8\u30e7\u30f3\u5207\u308a\u66ff\u3048"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../javascripts/katex.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      
+    
+  </body>
+</html>
