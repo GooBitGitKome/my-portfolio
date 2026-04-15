@@ -44,7 +44,8 @@ plugins:
   - mkdocstrings:
       handlers:
         python: {}
-
+  - obsidian-bridge:
+      is_using_jekyll: false
 
 markdown_extensions:
   - pymdownx.highlight:
@@ -63,11 +64,7 @@ markdown_extensions:
   - md_in_html
   - pymdownx.arithmatex:
       generic: true
-  - markdown_katex:
-      no_inline_svg: True
-      insert_fonts_css: True
-      macro-file: macros.tex
-
+  - obsidian_media_mkdocs
 extra_javascript:
   - javascripts/mathjax.js
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js

@@ -402,6 +402,7 @@ dependencies = [
     { name = "griffecli" },
     { name = "griffelib" },
 ]
+sdist = { url = "https://files.pythonhosted.org/packages/04/56/28a0accac339c164b52a92c6cfc45a903acc0c174caa5c1713803467b533/griffe-2.0.0.tar.gz", hash = "sha256:c68979cd8395422083a51ea7cf02f9c119d889646d99b7b656ee43725de1b80f", size = 293906 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/8b/94/ee21d41e7eb4f823b94603b9d40f86d3c7fde80eacc2c3c71845476dddaa/griffe-2.0.0-py3-none-any.whl", hash = "sha256:5418081135a391c3e6e757a7f3f156f1a1a746cc7b4023868ff7d5e2f9a980aa", size = 5214 },
 ]
@@ -414,6 +415,7 @@ dependencies = [
     { name = "colorama" },
     { name = "griffelib" },
 ]
+sdist = { url = "https://files.pythonhosted.org/packages/a4/f8/2e129fd4a86e52e58eefe664de05e7d502decf766e7316cc9e70fdec3e18/griffecli-2.0.0.tar.gz", hash = "sha256:312fa5ebb4ce6afc786356e2d0ce85b06c1c20d45abc42d74f0cda65e159f6ef", size = 56213 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/e6/ed/d93f7a447bbf7a935d8868e9617cbe1cadf9ee9ee6bd275d3040fbf93d60/griffecli-2.0.0-py3-none-any.whl", hash = "sha256:9f7cd9ee9b21d55e91689358978d2385ae65c22f307a63fb3269acf3f21e643d", size = 9345 },
 ]
@@ -422,6 +424,7 @@ wheels = [
 name = "griffelib"
 version = "2.0.0"
 source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/ad/06/eccbd311c9e2b3ca45dbc063b93134c57a1ccc7607c5e545264ad092c4a9/griffelib-2.0.0.tar.gz", hash = "sha256:e504d637a089f5cab9b5daf18f7645970509bf4f53eda8d79ed71cce8bd97934", size = 166312 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/4d/51/c936033e16d12b627ea334aaaaf42229c37620d0f15593456ab69ab48161/griffelib-2.0.0-py3-none-any.whl", hash = "sha256:01284878c966508b6d6f1dbff9b6fa607bc062d8261c5c7253cb285b06422a7f", size = 142004 },
 ]
@@ -916,6 +919,21 @@ wheels = [
 ]
 
 [[package]]
+name = "mkdocs-obsidian-bridge"
+version = "1.3.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "markdown" },
+    { name = "mkdocs" },
+    { name = "obsidian-callouts" },
+    { name = "obsidian-media" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/ee/93/d0dda71bacfcbdeb522a16e895311669a75eda3e7872e6182a5957520877/mkdocs_obsidian_bridge-1.3.1.tar.gz", hash = "sha256:92d7cee4dc857a45818b912c0091452a22976250513ee63fb4c1f64bb06d2ab8", size = 65061 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/25/3f/b250670f6a960186f556a49b6ab8714867065a0d03565cb678a3d0313216/mkdocs_obsidian_bridge-1.3.1-py3-none-any.whl", hash = "sha256:8653c49f970ad1e6c08983e5c9d0cfc2be4af0d432e415a5e601b9be00696126", size = 10129 },
+]
+
+[[package]]
 name = "mkdocs-static-i18n"
 version = "1.3.0"
 source = { registry = "https://pypi.org/simple" }
@@ -1035,6 +1053,30 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/83/f8/51569ac65d696c8ecbee95938f89d4abf00f47d58d48f6fbabfe8f0baefe/nest_asyncio-1.6.0.tar.gz", hash = "sha256:6f172d5449aca15afd6c646851f4e31e02c598d553a667e38cafa997cfec55fe", size = 7418 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/a0/c4/c2971a3ba4c6103a3d10c4b0f24f461ddc027f0f09763220cf35ca1401b3/nest_asyncio-1.6.0-py3-none-any.whl", hash = "sha256:87af6efd6b5e897c81050477ef65c62e2b2f35d51703cae01aff2905b1852e1c", size = 5195 },
+]
+
+[[package]]
+name = "obsidian-callouts"
+version = "1.0.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "markdown" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/cb/9d/2611de6c8ded3bab57fa72558e73d173db6e0458580363dfb9b1e2906d4b/obsidian_callouts-1.0.1.tar.gz", hash = "sha256:4ed5ddb9dbdd2340d845cd5efd412fbfe9011ccd7c2040b27f62d0998b0cef1d", size = 10831 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/66/ec/3096a14196b84b1846be8721d12ed60ecb3b1f133f90339160119096ce17/obsidian_callouts-1.0.1-py3-none-any.whl", hash = "sha256:a373e8be931c2cf574990f57061db5f724755f27aeb3aac23eb7436fde7f819b", size = 5096 },
+]
+
+[[package]]
+name = "obsidian-media"
+version = "2.0.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "markdown" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/2a/fa/99965ada8a2c84195dcd26ca72efc2f4bf515059a075625bcc8269d2abb7/obsidian_media-2.0.0.tar.gz", hash = "sha256:32ba18569f60d2ea747f8fdb72f979bbd265b2ef1305c95ef82d5efe21c7fca5", size = 11348 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/18/11/f83635e9bb098cbda2ad035bd1f27f48f6cce27aa954a0e11fb735184b4d/obsidian_media-2.0.0-py3-none-any.whl", hash = "sha256:9c1370cf2f6c488ab18fdfd1be1b07ae475d30983c8481dc6ba7836e85f75970", size = 6019 },
 ]
 
 [[package]]
@@ -1555,6 +1597,7 @@ dependencies = [
     { name = "mkdocs-awesome-pages-plugin" },
     { name = "mkdocs-jupyter" },
     { name = "mkdocs-material" },
+    { name = "mkdocs-obsidian-bridge" },
     { name = "mkdocs-static-i18n" },
     { name = "mkdocstrings", extra = ["python"] },
 ]
@@ -1566,6 +1609,7 @@ requires-dist = [
     { name = "mkdocs-awesome-pages-plugin", specifier = ">=2.9.0" },
     { name = "mkdocs-jupyter", specifier = ">=0.25.1" },
     { name = "mkdocs-material", specifier = ">=9.4.0" },
+    { name = "mkdocs-obsidian-bridge", specifier = ">=1.3.1" },
     { name = "mkdocs-static-i18n", specifier = ">=1.0.0" },
     { name = "mkdocstrings", extras = ["python"], specifier = ">=0.23.0" },
 ]
