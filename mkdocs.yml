@@ -38,9 +38,9 @@ theme:
 plugins:
   - search
   - awesome-pages
-  - mkdocs-jupyter:
+  - mkdocs-jupyter
   - tags:
-      tags_file: /tag_list.md 
+      tags_file: tag_list.md 
   - mkdocstrings:
       handlers:
         python: {}
