@@ -20,9 +20,6 @@ tags:
 
 [![View on GitHub](https://img.shields.io/badge/GitHub-View_Repository-blue?logo=github)](https://github.com/GooBitGitKome/optimization/tree/main/genetic_algorithm)
 
-> [!caution]
-> 現在編集中ですので、随時更新していきます。(2026/04/11)
-
 ## GAの仕組み
 
 GAは1975年にHolland氏によって考案された手法で、以下の図のような流れに沿って適応を繰り返し、最適化に近づいていく。
@@ -145,14 +142,14 @@ GAにおいて重要になってくるのが、交叉と淘汰をどのように
 
 ```mermaid
 graph TD
-   Start([初期集団の生成]) --> Eval[適合度の評価]
-   Eval --> Stop{収束条件を満たすか?}
-   Stop -- No --> Elite[エリート個体の選抜・保存]
-   Stop -- Yes --> End([最適解の出力])
-   Elite --> Select[選択: 次世代の親を選ぶ]
-   Select --> Replace[次世代集団の形成]
-   Replace --> Recover[保存していたエリートを戻す次世代集団とする]
-	Recover --> Eval
+    Start([初期集団の生成]) --> Eval[適合度の評価]
+    Eval --> Stop{収束条件を満たすか?}
+    Stop -- No --> Elite[エリート個体の選抜・保存]
+    Stop -- Yes --> End([最適解の出力])
+    Elite --> Select[選択: 次世代の親を選ぶ]
+    Select --> Replace[次世代集団の形成]
+    Replace --> Recover[保存していたエリートを戻し次世代集団とする]
+    Recover --> Eval
 ```
 
 ただし弱点として、恣意的に優良個体を次世代に入れることにより、最適解の早期収束が起こり、局所解に陥りやすい。
@@ -165,14 +162,14 @@ MGGの選択法にはルーレットの方が選択される。探索序盤に�
 
 ```mermaid
 graph TD
-   Start([初期集団の生成]) --> Eval[適合度の評価]
-   Eval --> Stop{収束条件を満たすか?}
-   Stop -- Yes --> End([最適解の出力])
-   Stop -- No --> FirstSelect[現世代からランダムに2個体選択し集団Cとし、その個体を差し引かれた親集団をPとする]
-   FirstSelect --> X[選択された2個体からt個体生成し集団C'とする]
-   X --> SecondSelect[集団CとC'の中から最良個体を1つ選択し、Pに戻す]
-   SecondSelect --> ThirdSelect[集団CとC'の中から確率的に1個体選択肢、Pに戻し、Pを次世代集団とする]
-	ThirdSelect --> Eval
+    Start([初期集団の生成]) --> Eval[適合度の評価]
+    Eval --> Stop{収束条件を満たすか?}
+    Stop -- Yes --> End([最適解の出力])
+    Stop -- No --> FirstSelect["現世代からランダムに2個体選択し集団Cとし、その個体を差し引かれた親集団をPとする"]
+    FirstSelect --> X["選択された2個体からt個体生成し集団C'とする"]
+    X --> SecondSelect["集団CとC'の中から最良個体を1つ選択し、Pに戻す"]
+    SecondSelect --> ThirdSelect["集団CとC'の中から確率的に1個体選択し、Pに戻し、Pを次世代集団とする"]
+    ThirdSelect --> Eval
 ```
 
 ### 適応度の評価

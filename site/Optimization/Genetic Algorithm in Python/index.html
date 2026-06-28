@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../Latin%20Hypercube%20Sampling%20%28LHS%29%20%E3%81%AE%E7%90%86%E8%AB%96%E3%81%A8%E6%9C%89%E7%94%A8%E6%80%A7/">
+        <link rel="prev" href="../..">
       
       
-        <link rel="next" href="../../tag_list/">
+        <link rel="next" href="../Latin%20Hypercube%20Sampling%20%28LHS%29%20%E3%81%AE%E7%90%86%E8%AB%96%E3%81%A8%E6%9C%89%E7%94%A8%E6%80%A7/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -228,7 +228,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../Latin%20Hypercube%20Sampling%20%28LHS%29%20%E3%81%AE%E7%90%86%E8%AB%96%E3%81%A8%E6%9C%89%E7%94%A8%E6%80%A7/" class="md-tabs__link">
+        <a href="./" class="md-tabs__link">
           
   
     
@@ -351,26 +351,6 @@
             Optimization
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Latin%20Hypercube%20Sampling%20%28LHS%29%20%E3%81%AE%E7%90%86%E8%AB%96%E3%81%A8%E6%9C%89%E7%94%A8%E6%80%A7/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Latin Hypercube Sampling (LHS) の理論と有用性
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -551,6 +531,26 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Latin%20Hypercube%20Sampling%20%28LHS%29%20%E3%81%AE%E7%90%86%E8%AB%96%E3%81%A8%E6%9C%89%E7%94%A8%E6%80%A7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Latin Hypercube Sampling (LHS) の理論と有用性
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -787,10 +787,6 @@
 <li>突然変異の代わりに、世代交代モデル（エリートやMGGなど）を採用している。</li>
 </ul>
 <p><a href="https://github.com/GooBitGitKome/optimization/tree/main/genetic_algorithm"><img alt="View on GitHub" src="https://img.shields.io/badge/GitHub-View_Repository-blue?logo=github" /></a></p>
-<blockquote>
-<p>[!caution]
-現在編集中ですので、随時更新していきます。(2026/04/11)</p>
-</blockquote>
 <h2 id="ga">GAの仕組み</h2>
 <p>GAは1975年にHolland氏によって考案された手法で、以下の図のような流れに沿って適応を繰り返し、最適化に近づいていく。</p>
 <pre class="mermaid"><code>graph LR
@@ -938,26 +934,26 @@
 <h5 id="_7">エリート戦略</h5>
 <p>エリート戦略とは、現世代の最良個体（エリートサイズk個）を必ず次世代に継承させる。選択法にはトーナメント法、ルーレット法、ランキング法が使われる[7]。世代交代のフローは以下の図のように行われる。</p>
 <pre class="mermaid"><code>graph TD
-   Start([初期集団の生成]) --&gt; Eval[適合度の評価]
-   Eval --&gt; Stop{収束条件を満たすか?}
-   Stop -- No --&gt; Elite[エリート個体の選抜・保存]
-   Stop -- Yes --&gt; End([最適解の出力])
-   Elite --&gt; Select[選択: 次世代の親を選ぶ]
-   Select --&gt; Replace[次世代集団の形成]
-   Replace --&gt; Recover[保存していたエリートを戻す次世代集団とする]
+    Start([初期集団の生成]) --&gt; Eval[適合度の評価]
+    Eval --&gt; Stop{収束条件を満たすか?}
+    Stop -- No --&gt; Elite[エリート個体の選抜・保存]
+    Stop -- Yes --&gt; End([最適解の出力])
+    Elite --&gt; Select[選択: 次世代の親を選ぶ]
+    Select --&gt; Replace[次世代集団の形成]
+    Replace --&gt; Recover[保存していたエリートを戻し次世代集団とする]
     Recover --&gt; Eval</code></pre>
 <p>ただし弱点として、恣意的に優良個体を次世代に入れることにより、最適解の早期収束が起こり、局所解に陥りやすい。</p>
 <h5 id="minimal-generation-gap-mgg">Minimal Generation Gap (MGG)</h5>
 <p>MGGの選択法にはルーレットの方が選択される。探索序盤における選択圧を下げ、初期収束を回避する。また、後半の集団内にて多様な個体を生存させやすく進化的停滞を抑制することが意図されたモデルである[8]。</p>
 <p>詳しいフローは以下のとおりである。</p>
 <pre class="mermaid"><code>graph TD
-   Start([初期集団の生成]) --&gt; Eval[適合度の評価]
-   Eval --&gt; Stop{収束条件を満たすか?}
-   Stop -- Yes --&gt; End([最適解の出力])
-   Stop -- No --&gt; FirstSelect[現世代からランダムに2個体選択し集団Cとし、その個体を差し引かれた親集団をPとする]
-   FirstSelect --&gt; X[選択された2個体からt個体生成し集団C'とする]
-   X --&gt; SecondSelect[集団CとC'の中から最良個体を1つ選択し、Pに戻す]
-   SecondSelect --&gt; ThirdSelect[集団CとC'の中から確率的に1個体選択肢、Pに戻し、Pを次世代集団とする]
+    Start([初期集団の生成]) --&gt; Eval[適合度の評価]
+    Eval --&gt; Stop{収束条件を満たすか?}
+    Stop -- Yes --&gt; End([最適解の出力])
+    Stop -- No --&gt; FirstSelect["現世代からランダムに2個体選択し集団Cとし、その個体を差し引かれた親集団をPとする"]
+    FirstSelect --&gt; X["選択された2個体からt個体生成し集団C'とする"]
+    X --&gt; SecondSelect["集団CとC'の中から最良個体を1つ選択し、Pに戻す"]
+    SecondSelect --&gt; ThirdSelect["集団CとC'の中から確率的に1個体選択し、Pに戻し、Pを次世代集団とする"]
     ThirdSelect --&gt; Eval</code></pre>
 <h3 id="_8">適応度の評価</h3>
 <p>残差平方和は、統計学や機械学習において、モデルの予測値と実際の観測値の誤差を定量化する指標である。</p>
