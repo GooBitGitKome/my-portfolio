@@ -146,9 +146,9 @@ graph TD
     Eval --> Stop{収束条件を満たすか?}
     Stop -- No --> Elite[エリート個体の選抜・保存]
     Stop -- Yes --> End([最適解の出力])
-    Elite --> Select[選択：次世代の親を選ぶ]
-    Select --> Replace[次世代集団の形成]
-    Replace --> Recover[保存していたエリートを戻し次世代集団とする]
+    Elite --> Select["選択: 次世代の親を選ぶ"]
+    Select --> Replace["次世代集団の形成"]
+    Replace --> Recover["保存していたエリートを戻し次世代集団とする"]
     Recover --> Eval
 ```
 
