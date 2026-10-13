@@ -1,0 +1,5 @@
+nav:
+  - Home: index.md
+  - Projects: projects
+  - Optimization: Optimization
+  - Tag List: tag_list.md

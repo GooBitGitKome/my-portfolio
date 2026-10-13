@@ -1,0 +1,218 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 860" width="800" height="860" fill="none">
+  <defs>
+    <!-- Background Glows -->
+    <radialGradient id="heroGlow" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#0d9488" stop-opacity="0.25"/>
+      <stop offset="60%" stop-color="#0284c7" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#0d9488" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="badgeGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Gradients -->
+    <linearGradient id="phoneBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#2dd4bf"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="cardGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f766e"/>
+      <stop offset="100%" stop-color="#042f2e"/>
+    </linearGradient>
+    <linearGradient id="barGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2dd4bf"/>
+      <stop offset="100%" stop-color="#0d9488"/>
+    </linearGradient>
+    <linearGradient id="btnGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d9488"/>
+      <stop offset="100%" stop-color="#0f766e"/>
+    </linearGradient>
+    <linearGradient id="badgeBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.05"/>
+    </linearGradient>
+
+    <!-- Filters -->
+    <filter id="shadowLg" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="24" stdDeviation="32" flood-color="#020617" flood-opacity="0.45"/>
+    </filter>
+    <filter id="shadowCard" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.25"/>
+    </filter>
+    <filter id="chipShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Ambient Backdrop Glow -->
+  <circle cx="400" cy="400" r="380" fill="url(#heroGlow)"/>
+
+  <!-- Left Floating Badge: Privacy First -->
+  <g transform="translate(40, 220)" filter="url(#shadowCard)">
+    <rect width="210" height="76" rx="20" fill="#0f172a" fill-opacity="0.88" stroke="url(#badgeBorder)" stroke-width="1"/>
+    <circle cx="36" cy="38" r="18" fill="#0d9488" fill-opacity="0.2"/>
+    <!-- Lock Icon -->
+    <path d="M36 28 C33 28 31 30.5 31 33.5 V36 H41 V33.5 C41 30.5 39 28 36 28 Z M29 36 H43 C44 36 45 37 45 38 V46 C45 47 44 48 43 48 H29 C28 48 27 47 27 46 V38 C27 37 28 36 29 36 Z" fill="#2dd4bf"/>
+    <text x="64" y="33" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="13" font-weight="700">完全ローカル &amp; iCloud</text>
+    <text x="64" y="52" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="11">外部サーバー・追跡ゼロ</text>
+  </g>
+
+  <!-- Right Floating Badge: Fast Input -->
+  <g transform="translate(550, 160)" filter="url(#shadowCard)">
+    <rect width="210" height="76" rx="20" fill="#0f172a" fill-opacity="0.88" stroke="url(#badgeBorder)" stroke-width="1"/>
+    <circle cx="36" cy="38" r="18" fill="#f59e0b" fill-opacity="0.2"/>
+    <!-- Lightning Bolt -->
+    <path d="M37 28 L30 38 H36 L34 48 L42 37 H36 L37 28 Z" fill="#fbbf24"/>
+    <text x="64" y="33" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="13" font-weight="700">高速電卓テンキー</text>
+    <text x="64" y="52" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="11">「00」キー &amp; ワンタップ全消去</text>
+  </g>
+
+  <!-- Bottom-Left Floating Badge: Daily Reminder -->
+  <g transform="translate(40, 540)" filter="url(#shadowCard)">
+    <rect width="220" height="76" rx="20" fill="#0f172a" fill-opacity="0.88" stroke="url(#badgeBorder)" stroke-width="1"/>
+    <circle cx="36" cy="38" r="18" fill="#38bdf8" fill-opacity="0.2"/>
+    <!-- Clock / Bell -->
+    <circle cx="36" cy="38" r="9" stroke="#38bdf8" stroke-width="2" fill="none"/>
+    <path d="M36 33 V38 H40" stroke="#38bdf8" stroke-width="2" stroke-linecap="round"/>
+    <text x="64" y="33" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="13" font-weight="700">日割り予算リマインド</text>
+    <text x="64" y="52" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="11">朝・昼・夕の最大3枠通知</text>
+  </g>
+
+  <!-- Bottom-Right Floating Badge: Swift Charts -->
+  <g transform="translate(540, 600)" filter="url(#shadowCard)">
+    <rect width="220" height="76" rx="20" fill="#0f172a" fill-opacity="0.88" stroke="url(#badgeBorder)" stroke-width="1"/>
+    <circle cx="36" cy="38" r="18" fill="#a855f7" fill-opacity="0.2"/>
+    <!-- Chart Bars -->
+    <rect x="30" y="40" width="3" height="8" rx="1.5" fill="#c084fc"/>
+    <rect x="35" y="34" width="3" height="14" rx="1.5" fill="#c084fc"/>
+    <rect x="40" y="30" width="3" height="18" rx="1.5" fill="#c084fc"/>
+    <text x="64" y="33" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="13" font-weight="700">12か月の収支推移</text>
+    <text x="64" y="52" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="11">Swift Charts による美しい可視化</text>
+  </g>
+
+  <!-- iPhone 16 Pro Frame -->
+  <g transform="translate(210, 40)" filter="url(#shadowLg)">
+    <!-- Outer Edge / Titanium Bezel -->
+    <rect width="380" height="770" rx="54" fill="#090d16" stroke="url(#phoneBorder)" stroke-width="3"/>
+
+    <!-- Screen Glass Area -->
+    <rect x="12" y="12" width="356" height="746" rx="44" fill="#0f172a"/>
+
+    <!-- Dynamic Island -->
+    <rect x="135" y="24" width="110" height="30" rx="15" fill="#000000"/>
+    <circle cx="225" cy="39" r="5" fill="#1e293b"/>
+
+    <!-- Status Bar -->
+    <text x="44" y="44" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="14" font-weight="600">9:41</text>
+    <!-- Battery & Signal -->
+    <g transform="translate(305, 33)">
+      <rect x="0" y="2" width="22" height="11" rx="3" fill="none" stroke="#f8fafc" stroke-width="1.5"/>
+      <rect x="2" y="4" width="15" height="7" rx="1.5" fill="#f8fafc"/>
+      <path d="M23 5.5 V9.5" stroke="#f8fafc" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+
+    <!-- App Header -->
+    <g transform="translate(24, 76)">
+      <text x="0" y="18" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="12" font-weight="500">2026年 10月 ▼</text>
+      <text x="0" y="44" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="22" font-weight="800" letter-spacing="-0.5">家計簿サマリー</text>
+      <!-- Export / Cloud Icon -->
+      <circle cx="295" cy="30" r="16" fill="#1e293b"/>
+      <path d="M291 30 L295 26 L299 30 M295 26 V35" stroke="#2dd4bf" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+
+    <!-- Main Net Balance Card -->
+    <g transform="translate(24, 140)">
+      <rect width="308" height="116" rx="20" fill="url(#cardGrad1)" stroke="#14b8a6" stroke-opacity="0.3" stroke-width="1"/>
+      <text x="20" y="30" fill="#99f6e4" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="12" font-weight="600">今月の差引収支</text>
+      <text x="20" y="66" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="32" font-weight="800" letter-spacing="-1">+¥184,200</text>
+      
+      <!-- Sub metrics divider -->
+      <line x1="20" y1="84" x2="288" y2="84" stroke="#115e59" stroke-width="1"/>
+      <text x="20" y="103" fill="#a7f3d0" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="12" font-weight="500">収入 <tspan font-weight="700">¥320,000</tspan></text>
+      <text x="160" y="103" fill="#fca5a5" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="12" font-weight="500">支出 <tspan font-weight="700">¥135,800</tspan></text>
+    </g>
+
+    <!-- Budget Progress Section -->
+    <g transform="translate(24, 272)">
+      <rect width="308" height="78" rx="18" fill="#1e293b" fill-opacity="0.7" stroke="#334155" stroke-width="1"/>
+      <text x="16" y="26" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="13" font-weight="700">月間予算 (残り ¥64,200)</text>
+      <text x="250" y="26" fill="#2dd4bf" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="12" font-weight="700">68%</text>
+      <!-- Progress Track -->
+      <rect x="16" y="38" width="276" height="8" rx="4" fill="#0f172a"/>
+      <rect x="16" y="38" width="188" height="8" rx="4" fill="url(#barGrad)"/>
+      <text x="16" y="62" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="10.5">本日予算枠: 残り <tspan fill="#facc15" font-weight="700">¥2,850</tspan> (日額ペース順調)</text>
+    </g>
+
+    <!-- Quick Genre Selection (3-Column Layout as in App) -->
+    <g transform="translate(24, 368)">
+      <text x="4" y="0" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="12" font-weight="600">ジャンル選択 (長押しで初期★)</text>
+      
+      <!-- Row 1 -->
+      <g transform="translate(0, 12)">
+        <!-- Active Pill (Starred Food) -->
+        <rect width="98" height="36" rx="10" fill="#0d9488" stroke="#2dd4bf" stroke-width="1.5" filter="url(#chipShadow)"/>
+        <text x="49" y="23" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="13" font-weight="700" text-anchor="middle">★ 食費</text>
+      </g>
+      <g transform="translate(105, 12)">
+        <rect width="98" height="36" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+        <text x="49" y="23" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="13" font-weight="500" text-anchor="middle">日用品</text>
+      </g>
+      <g transform="translate(210, 12)">
+        <rect width="98" height="36" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+        <text x="49" y="23" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="13" font-weight="500" text-anchor="middle">交通費</text>
+      </g>
+
+      <!-- Row 2 -->
+      <g transform="translate(0, 56)">
+        <rect width="98" height="36" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+        <text x="49" y="23" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="13" font-weight="500" text-anchor="middle">住居費</text>
+      </g>
+      <g transform="translate(105, 56)">
+        <rect width="98" height="36" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+        <text x="49" y="23" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="13" font-weight="500" text-anchor="middle">娯楽費</text>
+      </g>
+      <g transform="translate(210, 56)">
+        <rect width="98" height="36" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+        <text x="49" y="23" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="13" font-weight="500" text-anchor="middle">その他</text>
+      </g>
+    </g>
+
+    <!-- Amount Display & Input Preview -->
+    <g transform="translate(24, 488)">
+      <rect width="308" height="64" rx="16" fill="#090d16" stroke="#1e293b" stroke-width="1"/>
+      <text x="16" y="40" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="28" font-weight="800">¥ 3,480</text>
+      <!-- Circular Clear Button (丸付き×) -->
+      <g transform="translate(270, 20)">
+        <circle cx="12" cy="12" r="12" fill="#334155"/>
+        <path d="M8 8 L16 16 M16 8 L8 16" stroke="#94a3b8" stroke-width="2" stroke-linecap="round"/>
+      </g>
+      <text x="16" y="55" fill="#2dd4bf" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="10">食費 残額: ¥16,520 (保存時に即時再計算)</text>
+    </g>
+
+    <!-- Recent History Stream Mini -->
+    <g transform="translate(24, 568)">
+      <text x="4" y="0" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="12" font-weight="600">最近の記録</text>
+
+      <!-- History Item 1 -->
+      <g transform="translate(0, 10)">
+        <rect width="308" height="42" rx="10" fill="#1e293b" fill-opacity="0.5"/>
+        <circle cx="20" cy="21" r="5" fill="#2dd4bf"/>
+        <text x="34" y="25" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="12" font-weight="600">スーパー 食材買い出し</text>
+        <text x="292" y="25" fill="#fca5a5" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="12" font-weight="700" text-anchor="end">-¥2,980</text>
+      </g>
+
+      <!-- History Item 2 -->
+      <g transform="translate(0, 58)">
+        <rect width="308" height="42" rx="10" fill="#1e293b" fill-opacity="0.5"/>
+        <circle cx="20" cy="21" r="5" fill="#38bdf8"/>
+        <text x="34" y="25" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="12" font-weight="600">交通系IC チャージ</text>
+        <text x="292" y="25" fill="#fca5a5" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="12" font-weight="700" text-anchor="end">-¥3,000</text>
+      </g>
+    </g>
+
+    <!-- Home Indicator -->
+    <rect x="115" y="730" width="150" height="5" rx="2.5" fill="#94a3b8"/>
+  </g>
+</svg>

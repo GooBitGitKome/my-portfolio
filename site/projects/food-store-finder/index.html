@@ -1,0 +1,1144 @@
+
+<!doctype html>
+<html lang="ja" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../personal-kakeibo/">
+      
+      
+        <link rel="next" href="../memory-window/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.4.0">
+    
+    
+      
+        <title>Food Store Finder — 自前Webサイトなし飲食店検索＆連絡先収集システム - GooBitGitKome's Portfolio</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.9f615399.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.649f08f9.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#food-store-finder" class="md-skip">
+          コンテンツにスキップ
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="ヘッダー">
+    <a href="../.." title="GooBitGitKome&#39;s Portfolio" class="md-header__button md-logo" aria-label="GooBitGitKome's Portfolio" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            GooBitGitKome's Portfolio
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Food Store Finder — 自前Webサイトなし飲食店検索＆連絡先収集システム
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="検索" placeholder="検索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="検索">
+        
+        <button type="reset" class="md-search__icon md-icon" title="クリア" aria-label="クリア" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            検索を初期化
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="タブ" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+    
+  
+  Projects
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Optimization/Genetic%20Algorithm%20in%20Python/" class="md-tabs__link">
+          
+  
+    
+  
+  Optimization
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../tag_list/" class="md-tabs__link">
+        
+  
+    
+  
+  Tag List
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="ナビゲーション" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="GooBitGitKome&#39;s Portfolio" class="md-nav__button md-logo" aria-label="GooBitGitKome's Portfolio" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    GooBitGitKome's Portfolio
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Projects
+  </span>
+  
+
+            </a>
+            
+              <label class="md-nav__link " for="__nav_2">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Projects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../outdoor-cast/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OutdoorCast
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../personal-kakeibo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Personal Kakeibo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Food Store Finder
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Food Store Finder
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    🌐 公開デモサイト
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    💡 開発背景と解決課題
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    🌟 主要機能
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    🏗️ システムアーキテクチャ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ai-ai-driven-development" class="md-nav__link">
+    🤖 AI駆動開発 (AI-Driven Development) における実践
+  </a>
+  
+    <nav class="md-nav" aria-label="🤖 AI駆動開発 (AI-Driven Development) における実践">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vs-ai" class="md-nav__link">
+    役割分担（人間の意思決定 vs AIの高速化）
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    📊 技術スタック
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    🔗 ディレクトリ &amp; 関連リンク
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../memory-window/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    思い出の窓 (Memory Window)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../myo-link/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MyoLink
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../app-audio-router/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AppAudioRouter
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../virtual-keyboard/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VirtualKeyboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Optimization
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Optimization
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Optimization/Genetic%20Algorithm%20in%20Python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    遺伝的アルゴリズム (GA)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Optimization/Latin%20Hypercube%20Sampling%20%28LHS%29%20%E3%81%AE%E7%90%86%E8%AB%96%E3%81%A8%E6%9C%89%E7%94%A8%E6%80%A7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Latin Hypercube Sampling (LHS)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tag_list/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tag List
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    🌐 公開デモサイト
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    💡 開発背景と解決課題
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    🌟 主要機能
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    🏗️ システムアーキテクチャ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ai-ai-driven-development" class="md-nav__link">
+    🤖 AI駆動開発 (AI-Driven Development) における実践
+  </a>
+  
+    <nav class="md-nav" aria-label="🤖 AI駆動開発 (AI-Driven Development) における実践">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vs-ai" class="md-nav__link">
+    役割分担（人間の意思決定 vs AIの高速化）
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    📊 技術スタック
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    🔗 ディレクトリ &amp; 関連リンク
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+<nav class="md-tags" >
+  
+    
+    
+    
+      <a href="../../tag_list/#nextjs" class="md-tag">Next.js</a>
+    
+  
+    
+    
+    
+      <a href="../../tag_list/#react" class="md-tag">React</a>
+    
+  
+    
+    
+    
+      <a href="../../tag_list/#typescript" class="md-tag">TypeScript</a>
+    
+  
+    
+    
+    
+      <a href="../../tag_list/#python" class="md-tag">Python</a>
+    
+  
+    
+    
+    
+      <a href="../../tag_list/#fastapi" class="md-tag">FastAPI</a>
+    
+  
+    
+    
+    
+      <a href="../../tag_list/#uv" class="md-tag">uv</a>
+    
+  
+    
+    
+    
+      <a href="../../tag_list/#openstreetmap" class="md-tag">OpenStreetMap</a>
+    
+  
+    
+    
+    
+      <a href="../../tag_list/#cloudflare-pages" class="md-tag">Cloudflare Pages</a>
+    
+  
+    
+    
+    
+      <a href="../../tag_list/#google-cloud-run" class="md-tag">Google Cloud Run</a>
+    
+  
+    
+    
+    
+      <a href="../../tag_list/#ai-driven-development" class="md-tag">ai-driven-development</a>
+    
+  
+</nav>
+
+
+
+<h1 id="food-store-finder">Food Store Finder</h1>
+<div align="center">
+  <h3>自社公式Webサイト（ホームページ）を保有していない飲食店・食品店を抽出し、営業・支援連絡先を一覧化するフルスタック分析基盤</h3>
+</div>
+
+<div align="center" class="project-badges">
+<p><code>Next.js 14</code> <code>Leaflet</code> <code>FastAPI</code> <code>Python 3.11+</code> <code>uv</code> <code>OpenStreetMap (Overpass API)</code> <code>Cloudflare Pages</code> <code>Google Cloud Run</code> <code>AI駆動開発</code></p>
+</div>
+<p><br></p>
+<blockquote>
+<p><strong>「自社HPを持たない街の魅力的な飲食店をすばやく発掘し、支援や連携へ繋ぐ」</strong><br />
+地図上のピン配置や半径指定、地名入力から、<strong>公式自前Webサイトを持たず大手グルメポータルやSNSのみで営業している飲食店・カフェ・食品店を自動判定</strong>。<br />
+OSM（OpenStreetMap）と公開Web探索を組み合わせたハイブリッドクローリングにより、E-mailアドレス、電話番号、SNSアカウント、GoogleマップURLを自動収集してExcel対応CSV形式でエクスポートするシステムです。</p>
+</blockquote>
+<hr />
+<h2 id="_1">🌐 公開デモサイト</h2>
+<p>ブラウザから直接本システムをお試しいただけます：</p>
+<p><a href="https://food-store-finder.pages.dev/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.36 14c.08-.66.14-1.32.14-2 0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2m-5.15 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95a8.03 8.03 0 0 1-4.33 3.56M14.34 14H9.66c-.1-.66-.16-1.32-.16-2 0-.68.06-1.35.16-2h4.68c.09.65.16 1.32.16 2 0 .68-.07 1.34-.16 2M12 19.96c-.83-1.2-1.5-2.53-1.91-3.96h3.82c-.41 1.43-1.08 2.76-1.91 3.96M8 8H5.08A7.923 7.923 0 0 1 9.4 4.44C8.8 5.55 8.35 6.75 8 8m-2.92 8H8c.35 1.25.8 2.45 1.4 3.56A8.008 8.008 0 0 1 5.08 16m-.82-2C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2 0 .68.06 1.34.14 2M12 4.03c.83 1.2 1.5 2.54 1.91 3.97h-3.82c.41-1.43 1.08-2.77 1.91-3.97M18.92 8h-2.95a15.65 15.65 0 0 0-1.38-3.56c1.84.63 3.37 1.9 4.33 3.56M12 2C6.47 2 2 6.5 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2Z"/></svg></span> <strong>https://food-store-finder.pages.dev/ を開く</strong></a></p>
+<ul>
+<li><strong>フロントエンドホスティング</strong>: Cloudflare Pages（グローバルエッジ配信）</li>
+<li><strong>バックエンド API 実行環境</strong>: Google Cloud Run (<code>asia-northeast1</code> 東京リージョン)</li>
+</ul>
+<hr />
+<h2 id="_2">💡 開発背景と解決課題</h2>
+<p>地域活性化、中小店舗向けWeb制作支援、食材・備品卸売などの営業・連携開拓において、<strong>「自前のホームページをまだ持っていない個人店や地域密着店」にアプローチしたい</strong>という強い需要が存在します。</p>
+<p>しかし、従来の手作業や既存ポータル検索には以下の課題がありました：</p>
+<ol>
+<li><strong>ポータルサイトと自社サイトの判別の難しさ</strong>:</li>
+<li>検索結果に「食べログ」「ぐるなび」「ホットペッパー」「Uber Eats」「Google マップ」などのリンクが表示されても、それが「自前Webサイト」なのか「ポータル掲載」なのかを1件ずつ目視で確認する必要があった。</li>
+<li><strong>大手チェーン店の手動除外負荷</strong>:</li>
+<li>独自ドメインを持つ大手チェーン店が検索結果の大半を埋め尽くし、支援対象となる地域店を発掘するのに膨大な時間がかかる。</li>
+<li><strong>Google Maps API の従量課金コスト</strong>:</li>
+<li>地図検索や詳細情報の取得に Places API 等を使うと、リクエスト数に応じて高額な従量課金が発生する。</li>
+<li><strong>連絡先の分散</strong>:</li>
+<li>電話番号はポータルにあり、メールアドレスは別の公開情報にあり、SNSはInstagramにあるなど、情報が散在してリスト化が困難。</li>
+</ol>
+<p><strong>Food Store Finder</strong> は、OpenStreetMap のオープンデータ基盤とインテリジェントなドメイン判定エンジン、Universal URL スキームを融合させることで、<strong>API課金コストを完全にゼロに抑えながら</strong>、精度の高い店舗リストを瞬時に生成します。</p>
+<hr />
+<h2 id="_3">🌟 主要機能</h2>
+<ol>
+<li><strong>柔軟な地理空間検索 &amp; 現在地ワンクリック取得</strong>:</li>
+<li>地名・住所の自動ジオコーディング（Nominatim 連携）。</li>
+<li>ブラウザ Geolocation API による現在地からの即時検索。</li>
+<li>Leaflet マップ上のドラッグ可能なマーカーと探索半径スライダー（100m 〜 最大100km）。</li>
+<li><strong>ジャンル分類 &amp; リアルタイムタブ切り替え</strong>:</li>
+<li>飲食店・レストラン（🍽️）、カフェ・喫茶（☕）、食品・ベーカリー（🥖）の3大カテゴリを事前選択および取得後ワンクリックフィルタリング。</li>
+<li><strong>自社Webサイト有無の精密判定エンジン</strong>:</li>
+<li>ドメインブラックリスト / ホワイトリスト判定により、食べログ・ぐるなび・ホットペッパー・Uber Eats・出前館・Retty 等のみの店舗を「自社HPなし」と正確に判定。</li>
+<li>独自ドメインを保有する店舗や大手チェーン店を自動除外。</li>
+<li><strong>連絡先ハイブリッド発掘 (Contact Miner)</strong>:</li>
+<li>OSMタグと公開Web探索を組み合わせ、メールアドレス、電話番号、住所、公式SNS（Instagram等）を補完。</li>
+<li><strong>Google Maps 別ページ誘導 (API課金ゼロ設計)</strong>:</li>
+<li>Google Maps API キーを使用せず、公式 Universal URL スキームを活用して店舗詳細・外観写真・クチコミページへ直接ジャンプ。</li>
+<li><strong>Excel 完全対応の UTF-8 (BOM付き) CSV エクスポート</strong>:</li>
+<li>日本語版 Microsoft Excel で開いても文字化けしない UTF-8 BOM 形式でワンクリックダウンロード。</li>
+</ol>
+<hr />
+<h2 id="_4">🏗️ システムアーキテクチャ</h2>
+<pre class="mermaid"><code>flowchart TD
+    subgraph Browser["ブラウザ (Next.js 14 on Cloudflare Pages)"]
+        MAP["Leaflet 地図 UI\n(ピン配置 / 半径スライダー / 現在地)"]
+        TABLE["StoreTable\n(即時フィルタ / 色分けバッジ)"]
+        CSV["CSV エクスポート (UTF-8 with BOM)"]
+    end
+
+    subgraph CloudRun["FastAPI Backend (Google Cloud Run / uv)"]
+        ROUTER["REST API Router (/api/stores/search)"]
+        GEO["ジオコーディング (Nominatim)"]
+        DISCOVER["店舗探索 (Overpass API / OpenStreetMap)"]
+        JUDGE["自前HP判定エンジン (ポータル/SNSドメイン照合)"]
+        MINER["連絡先マイナー (メール・SNS発掘)"]
+    end
+
+    subgraph External["外部サービス &amp; オープンデータ"]
+        NOMINATIM["Nominatim (OSM Geocoding)"]
+        OVERPASS["Overpass API (OSM POI データ)"]
+        GMAP["Google Maps (Universal URL 遷移)"]
+    end
+
+    MAP --&gt;|探索クエリ (lat, lon, radius, genre)| ROUTER
+    ROUTER --&gt; GEO
+    GEO &lt;--&gt; NOMINATIM
+    ROUTER --&gt; DISCOVER
+    DISCOVER &lt;--&gt; OVERPASS
+    DISCOVER --&gt; JUDGE
+    JUDGE --&gt; MINER
+    MINER --&gt; ROUTER
+    ROUTER --&gt; TABLE
+    TABLE --&gt; CSV
+    TABLE --&gt;|Universal URL| GMAP</code></pre>
+<hr />
+<h2 id="ai-ai-driven-development">🤖 AI駆動開発 (AI-Driven Development) における実践</h2>
+<p>本プロジェクトは、新世代の超高速 Python パッケージマネージャー <strong>uv</strong> と AI エージェントの自律協調により、要件定義からデプロイまでを極めてスピーディに完結させました。</p>
+<h3 id="vs-ai">役割分担（人間の意思決定 vs AIの高速化）</h3>
+<ul>
+<li><strong>自身が担当した領域（ドメイン知見・戦略的判断・アーキテクチャ）:</strong></li>
+<li>「Google Maps API への従量課金をゼロにする」ための Universal URL スキーム活用の意思決定</li>
+<li>日本国内の主要グルメポータル・予約サービス（食べログ、ぐるなび、ホットペッパー、Retty 等）のドメイン識別パターンの仕様化</li>
+<li>営業・支援の現場で必須となる UTF-8 (BOM付き) CSV 出力フォーマットの要件定義</li>
+<li><strong>AIが加速した領域（高速実装・テスト自動化・環境構築）:</strong></li>
+<li>複雑な Overpass QL クエリ（<code>amenity=restaurant</code>, <code>shop=bakery</code> 等の空間結合）の自動最適化</li>
+<li><code>uv</code> ワークスペース定義（<code>pyproject.toml</code>）およびワンストップ起動スクリプト（<code>start.sh</code>、<code>Makefile</code>）の整備</li>
+<li>pytest 自動テストスイート（全13件）によるジオコーディング・自前HP判定の境界値テスト網羅</li>
+<li>アーキテクチャ決定記録（<a href="file:///app/food-store-finder/docs/adr/ADR-0001-technology-stack.md">ADR-0001</a>, <a href="file:///app/food-store-finder/docs/adr/ADR-0002-osm-hybrid-data-source.md">ADR-0002</a>）の構造化記述</li>
+</ul>
+<hr />
+<h2 id="_5">📊 技術スタック</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">分類</th>
+<th style="text-align: left;">技術 / ライブラリ</th>
+<th style="text-align: left;">バージョン / 詳細</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>フロントエンド</strong></td>
+<td style="text-align: left;">Next.js, React, TypeScript</td>
+<td style="text-align: left;">Next.js 14 (App Router), Tailwind CSS</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>地図 UI</strong></td>
+<td style="text-align: left;">Leaflet, React-Leaflet</td>
+<td style="text-align: left;">オープンソース地図タイル、カスタムマーカー、円形半径描画</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>バックエンド</strong></td>
+<td style="text-align: left;">FastAPI, Python, Uvicorn</td>
+<td style="text-align: left;">Python 3.11+, 非同期ルーティング</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>パッケージ管理</strong></td>
+<td style="text-align: left;">uv (Astral)</td>
+<td style="text-align: left;">超高速仮想環境・ロックファイル管理 (<code>uv.lock</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>データソース</strong></td>
+<td style="text-align: left;">OpenStreetMap (Overpass API)</td>
+<td style="text-align: left;">飲食店・カフェ・食料品店のPOIオープンデータ</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>インフラ / ホスティング</strong></td>
+<td style="text-align: left;">Cloudflare Pages, Google Cloud Run</td>
+<td style="text-align: left;">東京リージョン (<code>asia-northeast1</code>), Docker コンテナ</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>テストフレームワーク</strong></td>
+<td style="text-align: left;">pytest, pytest-asyncio</td>
+<td style="text-align: left;">全13件の自動テストによる品質担保</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_6">🔗 ディレクトリ &amp; 関連リンク</h2>
+<ul>
+<li><strong>リポジトリ</strong>: <a href="file:///app/food-store-finder"><code>food-store-finder</code></a></li>
+<li><strong>公開デモ</strong>: <a href="https://food-store-finder.pages.dev/">https://food-store-finder.pages.dev/</a></li>
+<li><strong>アーキテクチャ決定記録</strong>:</li>
+<li><a href="file:///app/food-store-finder/docs/adr/ADR-0001-technology-stack.md">ADR-0001: 技術スタックの選定</a></li>
+<li><a href="file:///app/food-store-finder/docs/adr/ADR-0002-osm-hybrid-data-source.md">ADR-0002: OSMとハイブリッドデータソース</a></li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            ページトップへ戻る
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.tracking", "search.suggest", "search.highlight", "content.code.copy", "navigation.indexes", "navigation.tags", "content.action.edit", "content.action.view"], "search": "../../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version": "\u30d0\u30fc\u30b8\u30e7\u30f3\u5207\u308a\u66ff\u3048"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.4e0fa4ba.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../javascripts/katex.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      
+    
+  </body>
+</html>

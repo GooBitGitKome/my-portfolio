@@ -1,0 +1,10 @@
+title: Projects
+nav:
+  - Overview: index.md
+  - OutdoorCast: outdoor-cast.md
+  - Personal Kakeibo: personal-kakeibo.md
+  - Food Store Finder: food-store-finder.md
+  - 思い出の窓 (Memory Window): memory-window.md
+  - MyoLink: myo-link.md
+  - AppAudioRouter: app-audio-router.md
+  - VirtualKeyboard: virtual-keyboard.md

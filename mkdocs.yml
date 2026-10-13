@@ -1,8 +1,4 @@
 site_name: GooBitGitKome's Portfolio
-nav:
-    - Home: index.md
-    - ...             # Global settings for awesome-pages
-    - Tag List: tag_list.md  
 theme:
   name: material
   language: ja

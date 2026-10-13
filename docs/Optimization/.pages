@@ -1,0 +1,4 @@
+title: Optimization
+nav:
+  - 遺伝的アルゴリズム (GA): Genetic Algorithm in Python.md
+  - Latin Hypercube Sampling (LHS): Latin Hypercube Sampling (LHS) の理論と有用性.md
