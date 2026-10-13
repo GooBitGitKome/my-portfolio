@@ -1,4 +1,4 @@
-# Takeshi Komeda's Tech Portfolio
+# Takeshi's Tech Portfolio
 
 数理最適化（GA/LHS）のアルゴリズム研究から、自律型AI協調開発による低レイヤ・通信・フルスタックWeb/Mobileプロダクトまでをまとめた技術ポートフォリオサイトです。
 
@@ -89,5 +89,5 @@ tech-post-ai/
 
 ## 👤 Author
 
-**Takeshi Komeda (GooBitGitKome)**
+**Takeshi (GooBitGitKome)**
 - GitHub: [@GooBitGitKome](https://github.com/GooBitGitKome)

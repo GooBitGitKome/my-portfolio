@@ -4,7 +4,7 @@ hide:
   - toc
 ---
 
-# Takeshi Komeda
+# Takeshi
 
 ## AI & IT Engineer / Board Member
 
