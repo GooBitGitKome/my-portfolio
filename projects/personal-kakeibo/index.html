@@ -1,0 +1,1156 @@
+
+<!doctype html>
+<html lang="ja" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../outdoor-cast/">
+      
+      
+        <link rel="next" href="../food-store-finder/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.4.0">
+    
+    
+      
+        <title>Personal Kakeibo — iOS・iPadOS向け家計簿アプリ & Emdash広報サイト - GooBitGitKome's Portfolio</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.9f615399.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.649f08f9.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#personal-kakeibo" class="md-skip">
+          コンテンツにスキップ
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="ヘッダー">
+    <a href="../.." title="GooBitGitKome&#39;s Portfolio" class="md-header__button md-logo" aria-label="GooBitGitKome's Portfolio" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            GooBitGitKome's Portfolio
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Personal Kakeibo — iOS・iPadOS向け家計簿アプリ & Emdash広報サイト
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="検索" placeholder="検索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="検索">
+        
+        <button type="reset" class="md-search__icon md-icon" title="クリア" aria-label="クリア" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            検索を初期化
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="タブ" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+    
+  
+  Projects
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Optimization/Genetic%20Algorithm%20in%20Python/" class="md-tabs__link">
+          
+  
+    
+  
+  Optimization
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../tag_list/" class="md-tabs__link">
+        
+  
+    
+  
+  Tag List
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="ナビゲーション" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="GooBitGitKome&#39;s Portfolio" class="md-nav__button md-logo" aria-label="GooBitGitKome's Portfolio" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    GooBitGitKome's Portfolio
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Projects
+  </span>
+  
+
+            </a>
+            
+              <label class="md-nav__link " for="__nav_2">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Projects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../outdoor-cast/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OutdoorCast
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Personal Kakeibo
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Personal Kakeibo
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    💡 開発背景と解決課題
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ios-ipados" class="md-nav__link">
+    🌟 ネイティブアプリ（iOS / iPadOS）の主要機能
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#emdash-cms-web-personal_kakeibo-web" class="md-nav__link">
+    🌐 Emdash CMS による広報・マーケティングWebサイト (personal_kakeibo-web)
+  </a>
+  
+    <nav class="md-nav" aria-label="🌐 Emdash CMS による広報・マーケティングWebサイト (personal_kakeibo-web)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#emdash-web" class="md-nav__link">
+    Emdash Webサイトの特徴
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    🏗️ システムアーキテクチャ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ai-ai-driven-development" class="md-nav__link">
+    🤖 AI駆動開発 (AI-Driven Development) における実践
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    📊 技術スタック
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    🔗 ディレクトリ &amp; 関連リンク
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../food-store-finder/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Food Store Finder
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../memory-window/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    思い出の窓 (Memory Window)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../myo-link/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MyoLink
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../app-audio-router/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AppAudioRouter
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../virtual-keyboard/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VirtualKeyboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Optimization
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Optimization
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Optimization/Genetic%20Algorithm%20in%20Python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    遺伝的アルゴリズム (GA)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Optimization/Latin%20Hypercube%20Sampling%20%28LHS%29%20%E3%81%AE%E7%90%86%E8%AB%96%E3%81%A8%E6%9C%89%E7%94%A8%E6%80%A7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Latin Hypercube Sampling (LHS)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tag_list/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tag List
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    💡 開発背景と解決課題
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ios-ipados" class="md-nav__link">
+    🌟 ネイティブアプリ（iOS / iPadOS）の主要機能
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#emdash-cms-web-personal_kakeibo-web" class="md-nav__link">
+    🌐 Emdash CMS による広報・マーケティングWebサイト (personal_kakeibo-web)
+  </a>
+  
+    <nav class="md-nav" aria-label="🌐 Emdash CMS による広報・マーケティングWebサイト (personal_kakeibo-web)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#emdash-web" class="md-nav__link">
+    Emdash Webサイトの特徴
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    🏗️ システムアーキテクチャ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ai-ai-driven-development" class="md-nav__link">
+    🤖 AI駆動開発 (AI-Driven Development) における実践
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    📊 技術スタック
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    🔗 ディレクトリ &amp; 関連リンク
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+<nav class="md-tags" >
+  
+    
+    
+    
+      <a href="../../tag_list/#ios" class="md-tag">iOS</a>
+    
+  
+    
+    
+    
+      <a href="../../tag_list/#ipados" class="md-tag">iPadOS</a>
+    
+  
+    
+    
+    
+      <a href="../../tag_list/#swift" class="md-tag">Swift</a>
+    
+  
+    
+    
+    
+      <a href="../../tag_list/#swiftui" class="md-tag">SwiftUI</a>
+    
+  
+    
+    
+    
+      <a href="../../tag_list/#swiftdata" class="md-tag">SwiftData</a>
+    
+  
+    
+    
+    
+      <a href="../../tag_list/#swiftcharts" class="md-tag">SwiftCharts</a>
+    
+  
+    
+    
+    
+      <a href="../../tag_list/#cloudkit" class="md-tag">CloudKit</a>
+    
+  
+    
+    
+    
+      <a href="../../tag_list/#emdash" class="md-tag">Emdash</a>
+    
+  
+    
+    
+    
+      <a href="../../tag_list/#astro" class="md-tag">Astro</a>
+    
+  
+    
+    
+    
+      <a href="../../tag_list/#ai-driven-development" class="md-tag">ai-driven-development</a>
+    
+  
+</nav>
+
+
+
+<h1 id="personal-kakeibo">Personal Kakeibo（家計簿）</h1>
+<div align="center">
+  <img src="./assets/personal-kakeibo/app-icon.png" alt="Personal Kakeibo Icon" width="110" style="border-radius: 24px; box-shadow: 0 4px 16px rgba(0,0,0,0.12);" />
+  <h3>日常の収支を最少の手間で記録する iOS・iPadOS 17+ 向け個人用家計簿 & Emdash 公式Web</h3>
+</div>
+
+<div align="center" class="project-badges">
+<p><code>iOS 17+</code> <code>iPadOS 17+</code> <code>Swift 6</code> <code>SwiftUI</code> <code>SwiftData</code> <code>Swift Charts</code> <code>CloudKit Private Database</code> <code>Emdash CMS</code> <code>Astro</code> <code>AI駆動開発</code></p>
+</div>
+<p><br></p>
+<blockquote>
+<p><strong>「毎日続けられる、最速の入力体験と完全なプライバシー保護」</strong><br />
+独自サーバーや広告、外部トラッキングを一切排除し、Apple純正の <strong>SwiftData</strong> と <strong>iCloud Private Database (CloudKit)</strong> のみでセキュアに同期する個人用家計簿アプリです。<br />
+また、プロダクトの価値を伝える広報・マーケティングサイト（<a href="file:///app/personal_kakeibo-web"><code>personal_kakeibo-web</code></a>）は <strong>Emdash CMS × Astro</strong> を採用し、AI駆動開発により短期間で高品質に立ち上げられました。</p>
+</blockquote>
+<hr />
+<h2 id="_1">💡 開発背景と解決課題</h2>
+<p>市販の家計簿アプリには多機能なものが多い反面、以下のような実利用上のストレスや懸念が存在していました：</p>
+<ol>
+<li><strong>過剰な機能と入力の遅延</strong>:</li>
+<li>画面起動から金額入力完了までに複数のタップや画面遷移が必要で、日々の継続ハードルが高くなってしまう。</li>
+<li><strong>クラウド外部サーバーへの個人資産データ蓄積とプライバシー懸念</strong>:</li>
+<li>外部事業者の独自DBに収支情報が保存され、アカウント登録や広告表示、第三者トラッキングが発生する。</li>
+<li><strong>オフライン耐性とデバイス間同期のトレードオフ</strong>:</li>
+<li>オフラインで軽快に動作しつつ、同じApple Accountを持つ iPhone と iPad の間でシームレスに同期する信頼できるアーキテクチャが少ない。</li>
+</ol>
+<p><strong>Personal Kakeibo</strong> は、<strong>「最速の入力UI」</strong> と <strong>「端末内ローカルファースト ＋ Apple純正プライベートクラウド同期」</strong> を両立させ、ストレスゼロで資産推移を把握できる体験を追求しました。</p>
+<hr />
+<h2 id="ios-ipados">🌟 ネイティブアプリ（iOS / iPadOS）の主要機能</h2>
+<div align="center">
+  <img src="./assets/personal-kakeibo/hero-visual.svg" alt="Personal Kakeibo UI Mockup" width="380" style="margin: 16px 0;" />
+</div>
+
+<ol>
+<li><strong>3列ジャンル選択 &amp; 長押し初期固定</strong>:</li>
+<li>画面遷移なしで即座にジャンルを選択。よく使うジャンルを長押しすると起動時のデフォルトとして記憶（★マーク表示）。</li>
+<li><strong>高速電卓ライクな入力テンキー</strong>:</li>
+<li>「00」キー、金額のワンタップ全消去ボタン、スワイプでのメモキーボード収納など、親指一本で完結するテンキー操作。</li>
+<li><strong>ジャンル別 日額・月額予算マネージャー</strong>:</li>
+<li>食費や日用品などの上限を設定。入力直後に「本日・当月の残額」をリアルタイム計算・即時フィードバック。</li>
+<li><strong>最大3枠のカスタム・リマインダー通知</strong>:</li>
+<li>朝（7:00）・昼（12:00）・夕（18:00）などの生活リズムに合わせ、1日の残り予算や繰り返し収支予定をローカル通知。</li>
+<li><strong>Swift Charts による視覚的分析</strong>:</li>
+<li>月別収支、カテゴリ別支出円グラフ、12か月の収支トレンド推移を流麗なネイティブチャートで描画。</li>
+<li><strong>完全ローカル保存 &amp; CloudKit 同期</strong>:</li>
+<li>独自サーバー不要。端末内保存（SwiftData）と iCloud Private Database で他端末へ自動同期。</li>
+<li><strong>CSV出力 &amp; プレビュー付き JSON バックアップ・復元</strong>:</li>
+<li>外部Excel・スプレッドシート連携用CSV出力に加え、スキーマバージョン互換（軽量マイグレーション）を備えたJSON完全復元をサポート。</li>
+</ol>
+<hr />
+<h2 id="emdash-cms-web-personal_kakeibo-web">🌐 Emdash CMS による広報・マーケティングWebサイト (<a href="file:///app/personal_kakeibo-web"><code>personal_kakeibo-web</code></a>)</h2>
+<p>プロダクトの普及と価値訴求のため、ヘッドレス/モダンCMS <strong>Emdash</strong> と <strong>Astro</strong> を組み合わせた専用LPサイトを構築しました。</p>
+<pre class="mermaid"><code>flowchart LR
+    A["Emdash CMS\n(file:data.db / seed.json)"] --&gt;|Content Schema| B["Astro SSR Framework\n(Pages &amp; Components)"]
+    B --&gt;|Emerald/Teal Theme| C["静的・高速LP配信\n(Home / Pricing / Contact)"]
+    C --&gt;|訴求| D["エンドユーザー (iPhone / iPad 所有者)"]</code></pre>
+<h3 id="emdash-web">Emdash Webサイトの特徴</h3>
+<ul>
+<li><strong>ブロック指向コンテンツ管理</strong>:</li>
+<li>管理画面（<code>/_emdash/admin</code>）を通じて、ヒーロー、機能ハイライト、料金ポリシー、FAQのブロックを非エンジニアでも直感編集可能。</li>
+<li><strong>ゼロコスト・プライバシー重視の料金訴求</strong>:</li>
+<li>完全無料・広告なし・iCloud同期による「安心感」を明確に打ち出す価格設計ページ（<code>/pricing</code>）。</li>
+<li><strong>Appleデザイン親和性</strong>:</li>
+<li>iOS標準に調和したエメラルド/ティールトーンのカラーパレット、ベクターモックアップ（<code>hero-visual.svg</code>）、ライト/ダーク/システム自動切替テーマスイッチャー。</li>
+</ul>
+<hr />
+<h2 id="_2">🏗️ システムアーキテクチャ</h2>
+<p>ネイティブアプリ側は、SwiftData と CloudKit の仕様に準拠したクリーンなモジュラーモノリス構造を採用しています。</p>
+<pre class="mermaid"><code>flowchart TD
+    subgraph UI["Presentation Layer (SwiftUI)"]
+        V["SwiftUI Views (3列ジャンル / 入力テンキー / グラフ)"]
+        VM["ViewModels (@Observable)"]
+    end
+
+    subgraph App["Application Layer"]
+        UC["Use Cases (Transaction / Budget / Sync Coordinator)"]
+    end
+
+    subgraph Domain["Domain Layer (Pure Swift)"]
+        M["Domain Models (Transaction, Category, Budget)"]
+        RP["Repository Protocols"]
+    end
+
+    subgraph Infra["Infrastructure Layer (Apple Frameworks)"]
+        REPO["SwiftData Repositories"]
+        CONTAINER["ModelContainer (@Model)"]
+        CLOUD["CloudKit Private Database (iCloud Sync)"]
+        NOTIF["UserNotifications (予算リマインダー)"]
+    end
+
+    V --&gt; VM
+    VM --&gt; UC
+    UC --&gt; RP
+    REPO -.-&gt;|implements| RP
+    REPO --&gt; CONTAINER
+    CONTAINER &lt;--&gt; CLOUD
+    UC --&gt; NOTIF</code></pre>
+<hr />
+<h2 id="ai-ai-driven-development">🤖 AI駆動開発 (AI-Driven Development) における実践</h2>
+<p>本プロジェクトでは、ネイティブ Swift 実装と Emdash 広報 Web の両軸において、自律型 AI エージェントとの緊密なオーケストレーションを実施しました。</p>
+<ul>
+<li><strong>人間エンジニアの意思決定領域:</strong></li>
+<li>「独自DBを作らず、完全なローカルファースト ＋ CloudKit Private Database でプライバシーを担保する」というアーキテクチャ方針の策定</li>
+<li>3列ボタンUI、親指操作テンキー、長押し固定など、実用性に直結するUX要件の定義</li>
+<li>Emdash CMS による広報サイトのコンテンツ構造とトーン＆マナーの設計</li>
+<li><strong>AIエージェントによる加速領域:</strong></li>
+<li>XcodeGen 仕様（<code>project.yml</code>、<code>project-cloud.yml</code>）および CloudKit Entitlements 設定スクリプト（<code>configure_cloud.py</code>）の自動生成</li>
+<li>SwiftData <code>@Model</code> とドメインモデルの双方向マッピングおよび単体テストスイート（XCTest）の構築</li>
+<li>Emdash CMS スキーマ（<code>seed.json</code>）と Astro UI コンポーネント、レスポンシブ CSS トークンの高速スキャフォールディング</li>
+</ul>
+<hr />
+<h2 id="_3">📊 技術スタック</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">対象</th>
+<th style="text-align: left;">レイヤー</th>
+<th style="text-align: left;">技術 / ツール</th>
+<th style="text-align: left;">役割</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>iOS / iPadOS アプリ</strong></td>
+<td style="text-align: left;">UI / View</td>
+<td style="text-align: left;">SwiftUI, Swift Charts</td>
+<td style="text-align: left;">ネイティブコンポーネント、流麗なアニメーションとチャート</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">言語・実行環境</td>
+<td style="text-align: left;">Swift 6, iOS 17+, iPadOS 17+</td>
+<td style="text-align: left;">モダン並行処理（<code>@MainActor</code>、Structured Concurrency）</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">永続化 &amp; 同期</td>
+<td style="text-align: left;">SwiftData, CloudKit Private DB</td>
+<td style="text-align: left;">ローカルSQLite抽象化と安全なiCloud自動同期</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">ビルド管理</td>
+<td style="text-align: left;">XcodeGen, Swift Package Manager</td>
+<td style="text-align: left;">再現性のある <code>.xcodeproj</code> 自動生成</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>広報・宣伝 Web</strong></td>
+<td style="text-align: left;">CMS</td>
+<td style="text-align: left;">Emdash CMS (<code>data.db</code>, SQLite)</td>
+<td style="text-align: left;">ブロック単位のコンテンツ管理、直感的管理パネル</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Web基盤</td>
+<td style="text-align: left;">Astro (SSR / Node / Static)</td>
+<td style="text-align: left;">超高速ページ生成、TypeScript</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">デザイン / UI</td>
+<td style="text-align: left;">Phosphor Icons, CSS Tokens, SVG</td>
+<td style="text-align: left;">高精細モックアップ、ダーク/ライトテーマ切り替え</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_4">🔗 ディレクトリ &amp; 関連リンク</h2>
+<ul>
+<li><strong>iOS/iPadOSアプリ</strong>: <a href="file:///app/personal_kakeibo"><code>personal_kakeibo</code></a></li>
+<li><strong>Emdash広報Webサイト</strong>: <a href="file:///app/personal_kakeibo-web"><code>personal_kakeibo-web</code></a></li>
+<li><strong>開発仕様書</strong>: <a href="file:///app/personal_kakeibo/docs/development-specification.md">開発仕様書 v2.1</a></li>
+<li><strong>実機検証手順</strong>: <a href="file:///app/personal_kakeibo/docs/device-validation.md">実機確認手順書</a></li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            ページトップへ戻る
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.tracking", "search.suggest", "search.highlight", "content.code.copy", "navigation.indexes", "navigation.tags", "content.action.edit", "content.action.view"], "search": "../../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version": "\u30d0\u30fc\u30b8\u30e7\u30f3\u5207\u308a\u66ff\u3048"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.4e0fa4ba.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../javascripts/katex.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      
+    
+  </body>
+</html>

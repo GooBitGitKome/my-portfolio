@@ -1,0 +1,1277 @@
+
+<!doctype html>
+<html lang="ja" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../memory-window/">
+      
+      
+        <link rel="next" href="../app-audio-router/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.4.0">
+    
+    
+      
+        <title>MyoLink（マイオリンク）- 神経筋疾患向けハイブリッド医療PRO＆コンディショニング支援プラットフォーム - GooBitGitKome's Portfolio</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.9f615399.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.649f08f9.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#myolink" class="md-skip">
+          コンテンツにスキップ
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="ヘッダー">
+    <a href="../.." title="GooBitGitKome&#39;s Portfolio" class="md-header__button md-logo" aria-label="GooBitGitKome's Portfolio" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            GooBitGitKome's Portfolio
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              MyoLink（マイオリンク）- 神経筋疾患向けハイブリッド医療PRO＆コンディショニング支援プラットフォーム
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="検索" placeholder="検索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="検索">
+        
+        <button type="reset" class="md-search__icon md-icon" title="クリア" aria-label="クリア" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            検索を初期化
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="タブ" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+    
+  
+  Projects
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Optimization/Genetic%20Algorithm%20in%20Python/" class="md-tabs__link">
+          
+  
+    
+  
+  Optimization
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../tag_list/" class="md-tabs__link">
+        
+  
+    
+  
+  Tag List
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="ナビゲーション" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="GooBitGitKome&#39;s Portfolio" class="md-nav__button md-logo" aria-label="GooBitGitKome's Portfolio" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    GooBitGitKome's Portfolio
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Projects
+  </span>
+  
+
+            </a>
+            
+              <label class="md-nav__link " for="__nav_2">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Projects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../outdoor-cast/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OutdoorCast
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../personal-kakeibo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Personal Kakeibo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../food-store-finder/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Food Store Finder
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../memory-window/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    思い出の窓 (Memory Window)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    MyoLink
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    MyoLink
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    💡 開発の背景と課題意識
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    🏗️ システムアーキテクチャ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    🌟 主要機能とコアドメイン
+  </a>
+  
+    <nav class="md-nav" aria-label="🌟 主要機能とコアドメイン">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-pro-alsfrs-r-mg-adl" class="md-nav__link">
+    1. 標準化医療PRO評価 (ALSFRS-R &amp; MG-ADL 準拠)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-clinical-alert-engine" class="md-nav__link">
+    2. 急変アラート判定エンジン (Clinical Alert Engine)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-caregiver-mode" class="md-nav__link">
+    3. 当事者本位のアクセシビリティ＆代理入力（Caregiver Mode）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    4. 日常コンディショニング＆栄養・疲労管理
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ai-ai-driven-development" class="md-nav__link">
+    🤖 AI駆動開発 (AI-Driven Development) の実践
+  </a>
+  
+    <nav class="md-nav" aria-label="🤖 AI駆動開発 (AI-Driven Development) の実践">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vs-ai" class="md-nav__link">
+    役割分担（人間の意思決定 vs AIの高速化）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1. 医療ドメインモデリングの高速化
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-pytest" class="md-nav__link">
+    2. pytest による包括的テストスイートの自動生成
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3. フロントエンド・バックエンドの型安全同期
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    🛠️ 技術スタック一覧
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#emdash-cms-web-myo-link-web" class="md-nav__link">
+    🌐 Emdash CMS による広報・啓蒙Webサイト計画 (myo-link-web)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    🔗 ディレクトリ &amp; 関連リンク
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../app-audio-router/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AppAudioRouter
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../virtual-keyboard/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VirtualKeyboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Optimization
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Optimization
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Optimization/Genetic%20Algorithm%20in%20Python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    遺伝的アルゴリズム (GA)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Optimization/Latin%20Hypercube%20Sampling%20%28LHS%29%20%E3%81%AE%E7%90%86%E8%AB%96%E3%81%A8%E6%9C%89%E7%94%A8%E6%80%A7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Latin Hypercube Sampling (LHS)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tag_list/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tag List
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    💡 開発の背景と課題意識
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    🏗️ システムアーキテクチャ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    🌟 主要機能とコアドメイン
+  </a>
+  
+    <nav class="md-nav" aria-label="🌟 主要機能とコアドメイン">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-pro-alsfrs-r-mg-adl" class="md-nav__link">
+    1. 標準化医療PRO評価 (ALSFRS-R &amp; MG-ADL 準拠)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-clinical-alert-engine" class="md-nav__link">
+    2. 急変アラート判定エンジン (Clinical Alert Engine)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-caregiver-mode" class="md-nav__link">
+    3. 当事者本位のアクセシビリティ＆代理入力（Caregiver Mode）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    4. 日常コンディショニング＆栄養・疲労管理
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ai-ai-driven-development" class="md-nav__link">
+    🤖 AI駆動開発 (AI-Driven Development) の実践
+  </a>
+  
+    <nav class="md-nav" aria-label="🤖 AI駆動開発 (AI-Driven Development) の実践">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vs-ai" class="md-nav__link">
+    役割分担（人間の意思決定 vs AIの高速化）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1. 医療ドメインモデリングの高速化
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-pytest" class="md-nav__link">
+    2. pytest による包括的テストスイートの自動生成
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3. フロントエンド・バックエンドの型安全同期
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    🛠️ 技術スタック一覧
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#emdash-cms-web-myo-link-web" class="md-nav__link">
+    🌐 Emdash CMS による広報・啓蒙Webサイト計画 (myo-link-web)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    🔗 ディレクトリ &amp; 関連リンク
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+<nav class="md-tags" >
+  
+    
+    
+    
+      <a href="../../tag_list/#projects" class="md-tag">projects</a>
+    
+  
+    
+    
+    
+      <a href="../../tag_list/#healthtech" class="md-tag">healthtech</a>
+    
+  
+    
+    
+    
+      <a href="../../tag_list/#accessibility" class="md-tag">accessibility</a>
+    
+  
+    
+    
+    
+      <a href="../../tag_list/#fastapi" class="md-tag">fastapi</a>
+    
+  
+    
+    
+    
+      <a href="../../tag_list/#react-native" class="md-tag">react-native</a>
+    
+  
+    
+    
+    
+      <a href="../../tag_list/#ai-driven-development" class="md-tag">ai-driven-development</a>
+    
+  
+    
+    
+    
+      <a href="../../tag_list/#python" class="md-tag">python</a>
+    
+  
+</nav>
+
+
+
+<h1 id="myolink">MyoLink（マイオリンク）</h1>
+<div class="project-badges">
+<p><code>FastAPI (Python 3.14)</code> <code>React Native / Expo Web</code> <code>SQLAlchemy</code> <code>Pydantic v2</code> <code>ALSFRS-R / MG-ADL</code> <code>Accessibility UI</code> <code>AI駆動開発</code></p>
+</div>
+<p><strong>神経・筋疾患（ALS、重症筋無力症、筋ジストロフィー等）患者向けの高精度医療用PRO（Patient-Reported Outcome：患者報告アウトカム）収集機能と、一般層・軽症者向けの日常コンディショニング・疲労管理機能を統合したハイブリッド・ヘルスケアアプリケーションです。</strong></p>
+<hr />
+<h2 id="_1">💡 開発の背景と課題意識</h2>
+<p>進行性神経筋疾患においては、日々の微細な筋力低下、疲労感の蓄積、嚥下や呼吸器症状の変動を<strong>継続的かつ正確にモニタリングすること</strong>が、早期の治療介入や急性増悪の防止に直結します。</p>
+<p>しかし、既存の医療システムや記録ツールには以下の課題がありました：</p>
+<ol>
+<li><strong>患者側の入力負荷・アクセシビリティの欠如</strong>:</li>
+<li>上肢に障害や筋力低下を持つ当事者にとって、一般的なスマートフォンアプリの小さなUIボタンや複雑な画面遷移は入力そのものが過大な身体的負担となります。</li>
+<li><strong>医療標準評価（PRO）と日常記録の分断</strong>:</li>
+<li>医療機関で求められる国際標準の臨床評価尺度（ALSFRS-R, MG-ADL等）と、日常の体調・栄養・疲労ログが分離しており、患者が二重の手間を強いられていました。</li>
+<li><strong>急変アラートと介助者連携の不在</strong>:</li>
+<li>呼吸機能や嚥下機能の急激な悪化を検知し、家族や医療チームへ自動通知する安全網、および患者自身が操作困難な際に介助者が代理入力できる仕組みが不足していました。</li>
+</ol>
+<p>こうした課題に対し、<strong>10年以上のNPO理事経験と福祉工学の実践知見</strong>を背景に、<strong>AI駆動開発（AI-Driven Development）</strong> の手法を駆使して高速・堅牢に設計・実装されたのが本プラットフォーム「<strong>MyoLink</strong>」です。</p>
+<hr />
+<h2 id="_2">🏗️ システムアーキテクチャ</h2>
+<p>マルチプラットフォーム（iOS / Android / Web）を単一コードベースでカバーする Expo / React Native for Web と、Python 3.14 + uv による超高速な FastAPI 非同期バックエンドで構成されています。</p>
+<pre class="mermaid"><code>flowchart TD
+    subgraph Client["フロントエンド (React Native + Expo Web)"]
+        UI_ACC["アクセシビリティUI\n(高コントラスト・大タップ領域)"]
+        PRO_VIEW["医療PRO入力 / 代理入力モード"]
+        WELL_VIEW["デイリーコンディション / 栄養・疲労ログ"]
+        API_CLIENT["型安全 API クライアント (TypeScript)"]
+    end
+
+    subgraph Backend["バックエンド (FastAPI / Python 3.14)"]
+        AUTH["認証・認可 (JWT)"]
+        PRO_API["臨床PROサービス (/api/v1/clinical)"]
+        ALERT_ENG["急変アラート判定エンジン (AlertService)"]
+        WELL_API["日常ウェルネスAPI (/api/v1/wellness)"]
+        DB[(データベース\nSQLAlchemy / SQLite / PostgreSQL)]
+    end
+
+    UI_ACC --&gt; PRO_VIEW
+    UI_ACC --&gt; WELL_VIEW
+    PRO_VIEW --&gt; API_CLIENT
+    WELL_VIEW --&gt; API_CLIENT
+
+    API_CLIENT --&gt;|REST API / JSON| AUTH
+    API_CLIENT --&gt;|PRO記録送信| PRO_API
+    API_CLIENT --&gt;|ウェルネス送信| WELL_API
+
+    PRO_API --&gt; ALERT_ENG
+    ALERT_ENG --&gt;|重大リスク検知| DB
+    PRO_API --&gt; DB
+    WELL_API --&gt; DB</code></pre>
+<hr />
+<h2 id="_3">🌟 主要機能とコアドメイン</h2>
+<h3 id="1-pro-alsfrs-r-mg-adl">1. 標準化医療PRO評価 (ALSFRS-R &amp; MG-ADL 準拠)</h3>
+<p>神経筋疾患の臨床評価尺度である ALSFRS-R および MG-ADL の評価軸に基づき、患者の主訴を定量スコアリングします。</p>
+<ul>
+<li><strong>5大ドメインの評価</strong>:</li>
+<li><code>swallowing_score</code>（嚥下機能）</li>
+<li><code>speech_score</code>（構音・発話）</li>
+<li><code>respiratory_score</code>（呼吸困難度）</li>
+<li><code>upper_limb_score</code>（上肢動作・書字・整容）</li>
+<li><code>lower_limb_score</code>（下肢・起立・歩行）</li>
+<li>各項目 0（正常）〜 4（重度機能喪失）の5段階でスコアリングし、総合重症度スコア（0〜20点）を時系列追跡。</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># 臨床PRO評価モデルの定義 (backend/app/models/clinical.py)</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">class</span><span class="w"> </span><span class="nc">ProAssessment</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">__tablename__</span> <span class="o">=</span> <span class="s2">&quot;pro_assessments&quot;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="nb">id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">patient_id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="s2">&quot;users.id&quot;</span><span class="p">),</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="n">recorded_by_user_id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="s2">&quot;users.id&quot;</span><span class="p">),</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="n">is_proxy</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Boolean</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>  <span class="c1"># 介助者による代理入力フラグ</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="n">assessment_date</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    <span class="c1"># 5領域スコア</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    <span class="n">swallowing_score</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    <span class="n">speech_score</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    <span class="n">respiratory_score</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>    <span class="n">upper_limb_score</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>    <span class="n">lower_limb_score</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>    <span class="n">total_score</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>    <span class="n">notes</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Text</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="2-clinical-alert-engine">2. 急変アラート判定エンジン (Clinical Alert Engine)</h3>
+<p>PROデータが記録された瞬間、バックエンドのルールベース・エンジニアリングが稼働。特に生命維持に直結する<strong>呼吸（respiratory）</strong>および<strong>嚥下（swallowing）</strong>の閾値違反や、前回測定からの急激な悪化（Rapid Decline）を即座に検知し、未確認アラートを発行します。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># 臨床アラート判定ロジック (backend/app/services/alert_service.py 抜粋)</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">def</span><span class="w"> </span><span class="nf">evaluate_assessment_alerts</span><span class="p">(</span><span class="n">assessment</span><span class="p">:</span> <span class="n">ProAssessment</span><span class="p">,</span> <span class="n">db</span><span class="p">:</span> <span class="n">Session</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="n">ClinicalAlert</span><span class="p">]:</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    <span class="n">alerts</span> <span class="o">=</span> <span class="p">[]</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    <span class="c1"># 呼吸器系の重篤化検知</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    <span class="k">if</span> <span class="n">assessment</span><span class="o">.</span><span class="n">respiratory_score</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">:</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>        <span class="n">alerts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ClinicalAlert</span><span class="p">(</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>            <span class="n">patient_id</span><span class="o">=</span><span class="n">assessment</span><span class="o">.</span><span class="n">patient_id</span><span class="p">,</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>            <span class="n">assessment_id</span><span class="o">=</span><span class="n">assessment</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>            <span class="n">alert_type</span><span class="o">=</span><span class="s2">&quot;RESPIRATORY_CRITICAL&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>            <span class="n">severity</span><span class="o">=</span><span class="s2">&quot;CRITICAL&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>            <span class="n">message</span><span class="o">=</span><span class="s2">&quot;呼吸困難スコアが危険水準に達しています。医療機関への連絡を検討してください。&quot;</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>        <span class="p">))</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>    <span class="c1"># 嚥下機能の急変検知</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>    <span class="k">if</span> <span class="n">assessment</span><span class="o">.</span><span class="n">swallowing_score</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">:</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>        <span class="n">alerts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ClinicalAlert</span><span class="p">(</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>            <span class="n">patient_id</span><span class="o">=</span><span class="n">assessment</span><span class="o">.</span><span class="n">patient_id</span><span class="p">,</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>            <span class="n">assessment_id</span><span class="o">=</span><span class="n">assessment</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>            <span class="n">alert_type</span><span class="o">=</span><span class="s2">&quot;SWALLOWING_CRITICAL&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>            <span class="n">severity</span><span class="o">=</span><span class="s2">&quot;WARNING&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>            <span class="n">message</span><span class="o">=</span><span class="s2">&quot;誤嚥・嚥下障害のリスクが高まっています。&quot;</span>
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>        <span class="p">))</span>
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>    <span class="k">return</span> <span class="n">alerts</span>
+</code></pre></div>
+<h3 id="3-caregiver-mode">3. 当事者本位のアクセシビリティ＆代理入力（Caregiver Mode）</h3>
+<ul>
+<li><strong>高コントラスト &amp; 大型タッチターゲット</strong>: 手指の巧緻性が低下している状態でも誤タップを防ぐエルゴノミックUI。</li>
+<li><strong>介助者代理記録 (<code>is_proxy</code>)</strong>: 患者本人の発話・指先操作が困難な日には、登録された介助者（Caregiver）アカウントから安全に代理入力が可能。監査ログとして「誰が記録したか」を厳格に保持。</li>
+</ul>
+<h3 id="4">4. 日常コンディショニング＆栄養・疲労管理</h3>
+<p>疾患管理だけでなく、日々の疲労レベル（Fatigue Score）、睡眠時間、PFCバランスマクロ栄養素（タンパク質・脂質・炭水化物・カロリー）、リハビリ・運動記録を統合管理。継続的なストリーク表示で入力モチベーションを支えます。</p>
+<hr />
+<h2 id="ai-ai-driven-development">🤖 AI駆動開発 (AI-Driven Development) の実践</h2>
+<p>本プロジェクトでは、開発プロセスの全工程において<strong>最新AIエージェントとの協調エンジニアリング（AI-Orchestration）</strong>を導入し、品質と開発速度を最大化しました。</p>
+<h3 id="vs-ai">役割分担（人間の意思決定 vs AIの高速化）</h3>
+<ul>
+<li><strong>自身が担当した領域（ドメイン設計・意思決定・総合検証）:</strong></li>
+<li>10年以上のNPO理事経験に基づく臨床課題抽出（PRO尺度 ALSFRS-R / MG-ADL の選定、介助者代理入力の必要性）</li>
+<li>システムアーキテクチャの選定（Expo Web + FastAPI + uv）とデータモデル仕様策定</li>
+<li>急変アラート（呼吸・嚥下スコア急低下）の臨床的閾値ルール定義</li>
+<li>生成されたAPIとフロントエンドUIの統合動作確認・アクセシビリティ検証</li>
+<li><strong>AIが加速した領域（高速生成・網羅的検証）:</strong></li>
+<li>Pydantic v2 と SQLAlchemy モデルのボイラープレート生成</li>
+<li>pytest による境界値・エッジケース網羅テストスイートの自動生成</li>
+<li>OpenAPI スキーマからの TypeScript 型同期クライアント生成</li>
+</ul>
+<h3 id="1">1. 医療ドメインモデリングの高速化</h3>
+<p>複雑な神経筋疾患の臨床指標（ALSFRS-R, MG-ADL）や階層的ユーザー権限モデル（患者・介助者・研究者）のスキーマ設計を、ドメイン駆動設計（DDD）の文脈でAIと対話しながら迅速にモデリング。Pydantic v2 と SQLAlchemy 間の型整合性をゼロから堅牢に構築しました。</p>
+<h3 id="2-pytest">2. pytest による包括的テストスイートの自動生成</h3>
+<ul>
+<li>臨床スコア計算・閾値アラートロジックの全エッジケース（境界値テスト）</li>
+<li>JWT認証、権限分離（他患者データのアクセス遮断）テスト</li>
+<li>ポート8080でのE2E検証スクリプト（<code>./scripts/test_port_8080.sh</code>）
+これらをAIを活用して自動整備し、リファクタリング耐性の高いテストカバレッジを実現しました。</li>
+</ul>
+<h3 id="3">3. フロントエンド・バックエンドの型安全同期</h3>
+<p>バックエンドの OpenAPI スキーマを元に、React Native 側の TypeScript 型定義および API クライアントを自動同期。通信エラーや型不一致による不具合を排除しました。</p>
+<hr />
+<h2 id="_4">🛠️ 技術スタック一覧</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">レイヤー</th>
+<th style="text-align: left;">技術 / ライブラリ</th>
+<th style="text-align: left;">採用理由・役割</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Backend</strong></td>
+<td style="text-align: left;">Python 3.14, FastAPI, uv</td>
+<td style="text-align: left;">高速なASGI非同期処理、最新の型ヒント、高速な依存解決</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Data Layer</strong></td>
+<td style="text-align: left;">SQLAlchemy, Pydantic v2</td>
+<td style="text-align: left;">堅牢なORMマッピングと厳格なスキーマバリデーション</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Frontend</strong></td>
+<td style="text-align: left;">React Native, Expo SDK, TypeScript</td>
+<td style="text-align: left;">iOS/AndroidネイティブおよびWebブラウザのクロスプラットフォーム展開</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>UI/UX</strong></td>
+<td style="text-align: left;">React Native for Web, Custom Theme</td>
+<td style="text-align: left;">アクセシビリティ（A11y）準拠、大型ターゲット、高コントラスト設計</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>DevOps &amp; QA</strong></td>
+<td style="text-align: left;">Docker, Zellij, Pytest, Shell Scripting</td>
+<td style="text-align: left;">再現性の高い開発コンテナ環境と自動テストパイプライン</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>広報・Web展開</strong></td>
+<td style="text-align: left;">Emdash CMS, Astro</td>
+<td style="text-align: left;">医療・福祉関係者および当事者向けの解説・啓蒙Webサイト基盤</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="emdash-cms-web-myo-link-web">🌐 Emdash CMS による広報・啓蒙Webサイト計画 (<a href="file:///app/myo-link-web"><code>myo-link-web</code></a>)</h2>
+<p>難病当事者、ご家族、医療・訪問看護チームに向けた啓蒙およびプロダクト紹介を行うため、<strong>Emdash CMS × Astro</strong> をベースとしたWeb情報発信基盤（<a href="file:///app/myo-link-web"><code>myo-link-web</code></a>）の立ち上げを進めています。</p>
+<ul>
+<li><strong>医療福祉関係者向け信頼性コンテンツ</strong>:</li>
+<li>ALSFRS-R / MG-ADL 臨床PROの収集意義や、急変アラート判定アルゴリズムの信頼性をわかりやすく解説。</li>
+<li><strong>当事者フレンドリーなアクセシブルWebデザイン</strong>:</li>
+<li>スクリーンリーダー、ハイコントラスト、大きなフォントサイズに対応した Emdash テーマ設計。</li>
+<li><strong>AI駆動での高速コンテンツ管理</strong>:</li>
+<li><code>seed.json</code> と SQLite を活用し、臨床プロトコルの変更や最新の治験情報を迅速に更新可能。</li>
+</ul>
+<hr />
+<h2 id="_5">🔗 ディレクトリ &amp; 関連リンク</h2>
+<ul>
+<li><strong>アプリケーションリポジトリ</strong>: <a href="file:///app/myo-link"><code>myo-link</code></a></li>
+<li><strong>Emdash広報Webサイト</strong>: <a href="file:///app/myo-link-web"><code>myo-link-web</code></a></li>
+<li><strong>バックエンドAPI</strong>: FastAPI (<code>/api/v1/clinical</code>, <code>/api/v1/wellness</code>)</li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            ページトップへ戻る
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.tracking", "search.suggest", "search.highlight", "content.code.copy", "navigation.indexes", "navigation.tags", "content.action.edit", "content.action.view"], "search": "../../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version": "\u30d0\u30fc\u30b8\u30e7\u30f3\u5207\u308a\u66ff\u3048"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.4e0fa4ba.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../javascripts/katex.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      
+    
+  </body>
+</html>

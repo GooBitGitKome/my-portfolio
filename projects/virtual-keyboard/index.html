@@ -1,0 +1,1336 @@
+
+<!doctype html>
+<html lang="ja" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../app-audio-router/">
+      
+      
+        <link rel="next" href="../../Optimization/Genetic%20Algorithm%20in%20Python/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.4.0">
+    
+    
+      
+        <title>VirtualKeyboard with iPhone — 上肢障害・入力支援のためのアクセシブル入力システム - GooBitGitKome's Portfolio</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.9f615399.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.649f08f9.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#virtualkeyboard-with-iphone" class="md-skip">
+          コンテンツにスキップ
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="ヘッダー">
+    <a href="../.." title="GooBitGitKome&#39;s Portfolio" class="md-header__button md-logo" aria-label="GooBitGitKome's Portfolio" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            GooBitGitKome's Portfolio
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              VirtualKeyboard with iPhone — 上肢障害・入力支援のためのアクセシブル入力システム
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="検索" placeholder="検索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="検索">
+        
+        <button type="reset" class="md-search__icon md-icon" title="クリア" aria-label="クリア" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            検索を初期化
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="タブ" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+    
+  
+  Projects
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Optimization/Genetic%20Algorithm%20in%20Python/" class="md-tabs__link">
+          
+  
+    
+  
+  Optimization
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../tag_list/" class="md-tabs__link">
+        
+  
+    
+  
+  Tag List
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="ナビゲーション" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="GooBitGitKome&#39;s Portfolio" class="md-nav__button md-logo" aria-label="GooBitGitKome's Portfolio" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    GooBitGitKome's Portfolio
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Projects
+  </span>
+  
+
+            </a>
+            
+              <label class="md-nav__link " for="__nav_2">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Projects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../outdoor-cast/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OutdoorCast
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../personal-kakeibo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Personal Kakeibo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../food-store-finder/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Food Store Finder
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../memory-window/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    思い出の窓 (Memory Window)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../myo-link/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MyoLink
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../app-audio-router/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AppAudioRouter
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    VirtualKeyboard
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    VirtualKeyboard
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    💡 開発背景と解決課題
+  </a>
+  
+    <nav class="md-nav" aria-label="💡 開発背景と解決課題">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    福祉現場・当事者の切実な課題
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    本プロジェクトの狙い
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    🌟 主要機能
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    🏗️ システムアーキテクチャ
+  </a>
+  
+    <nav class="md-nav" aria-label="🏗️ システムアーキテクチャ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    通信シーケンスとデータ信頼性
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    🛠️ 技術的挑戦と実装のポイント
+  </a>
+  
+    <nav class="md-nav" aria-label="🛠️ 技術的挑戦と実装のポイント">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-ble-mtu" class="md-nav__link">
+    1. BLE MTU 制約とフレーム再構築の堅牢性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2. マルチプラットフォームにおける入力インジェクションの互換性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3. 当事者ファーストのアクセシビリティ &amp; プライバシー設計
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    📊 技術スタック
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aiai-orchestration" class="md-nav__link">
+    🤖 AI駆動開発における役割分担（AI-Orchestration）
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#emdash-web-virtual_keyboard_with_iphone-web" class="md-nav__link">
+    🌐 Emdash による広報・製品紹介Webサイト (virtual_keyboard_with_iphone-web)
+  </a>
+  
+    <nav class="md-nav" aria-label="🌐 Emdash による広報・製品紹介Webサイト (virtual_keyboard_with_iphone-web)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#web" class="md-nav__link">
+    広報Webサイトの特徴
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aiai-orchestration_1" class="md-nav__link">
+    🤖 AI駆動開発における役割分担（AI-Orchestration）
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    🔗 関連リンク &amp; 配布
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Optimization
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Optimization
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Optimization/Genetic%20Algorithm%20in%20Python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    遺伝的アルゴリズム (GA)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Optimization/Latin%20Hypercube%20Sampling%20%28LHS%29%20%E3%81%AE%E7%90%86%E8%AB%96%E3%81%A8%E6%9C%89%E7%94%A8%E6%80%A7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Latin Hypercube Sampling (LHS)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tag_list/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tag List
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    💡 開発背景と解決課題
+  </a>
+  
+    <nav class="md-nav" aria-label="💡 開発背景と解決課題">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    福祉現場・当事者の切実な課題
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    本プロジェクトの狙い
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    🌟 主要機能
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    🏗️ システムアーキテクチャ
+  </a>
+  
+    <nav class="md-nav" aria-label="🏗️ システムアーキテクチャ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    通信シーケンスとデータ信頼性
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    🛠️ 技術的挑戦と実装のポイント
+  </a>
+  
+    <nav class="md-nav" aria-label="🛠️ 技術的挑戦と実装のポイント">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-ble-mtu" class="md-nav__link">
+    1. BLE MTU 制約とフレーム再構築の堅牢性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2. マルチプラットフォームにおける入力インジェクションの互換性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3. 当事者ファーストのアクセシビリティ &amp; プライバシー設計
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    📊 技術スタック
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aiai-orchestration" class="md-nav__link">
+    🤖 AI駆動開発における役割分担（AI-Orchestration）
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#emdash-web-virtual_keyboard_with_iphone-web" class="md-nav__link">
+    🌐 Emdash による広報・製品紹介Webサイト (virtual_keyboard_with_iphone-web)
+  </a>
+  
+    <nav class="md-nav" aria-label="🌐 Emdash による広報・製品紹介Webサイト (virtual_keyboard_with_iphone-web)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#web" class="md-nav__link">
+    広報Webサイトの特徴
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aiai-orchestration_1" class="md-nav__link">
+    🤖 AI駆動開発における役割分担（AI-Orchestration）
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    🔗 関連リンク &amp; 配布
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+<nav class="md-tags" >
+  
+    
+    
+    
+      <a href="../../tag_list/#ios" class="md-tag">iOS</a>
+    
+  
+    
+    
+    
+      <a href="../../tag_list/#swift" class="md-tag">Swift</a>
+    
+  
+    
+    
+    
+      <a href="../../tag_list/#python" class="md-tag">Python</a>
+    
+  
+    
+    
+    
+      <a href="../../tag_list/#ble" class="md-tag">BLE</a>
+    
+  
+    
+    
+    
+      <a href="../../tag_list/#accessibility" class="md-tag">Accessibility</a>
+    
+  
+    
+    
+    
+      <a href="../../tag_list/#assistive-tech" class="md-tag">Assistive-Tech</a>
+    
+  
+    
+    
+    
+      <a href="../../tag_list/#cross-platform" class="md-tag">Cross-Platform</a>
+    
+  
+    
+    
+    
+      <a href="../../tag_list/#ai-driven-development" class="md-tag">ai-driven-development</a>
+    
+  
+</nav>
+
+
+
+<h1 id="virtualkeyboard-with-iphone">VirtualKeyboard with iPhone</h1>
+<div align="center">
+  <img src="./assets/virtual-keyboard/virtualkeyboard-icon.svg" alt="VirtualKeyboard Icon" width="120" style="margin-bottom: 8px;" />
+  <h3>iPhone を PC (Mac / Windows / Linux) のアクセシブルな入力サーフェスに変える福祉支援システム</h3>
+</div>
+
+<div align="center" class="project-badges">
+<p><code>iOS</code> <code>Swift</code> <code>Python</code> <code>BLE</code> <code>Accessibility</code> <code>Assistive-Tech</code> <code>AI駆動開発</code></p>
+</div>
+<p><br></p>
+<blockquote>
+<p><strong>「使い慣れたスマートフォンの操作性で、PCの自由な入力を取り戻す」</strong><br />
+上肢や手指の筋力・可動域に制限のある方々のために開発された、iOS デバイス（iPhone / iPad）と PC（Mac / Windows / Linux）を Bluetooth Low Energy (BLE) で直結するクロスプラットフォーム入力支援システムです。
+iOS 標準のタッチキーボード、フリック入力、高精度な音声ディクテーション、巨大なカスタマイズ可能ショートカットキー、仮想トラックパッドを組み合わせ、PC への確実なテキスト入力とキーストローク注入を実現します。</p>
+</blockquote>
+<hr />
+<h2 id="_1">💡 開発背景と解決課題</h2>
+<h3 id="_2">福祉現場・当事者の切実な課題</h3>
+<p>病気や事故による頸髄損傷、ALS、脳性麻痺、関節リウマチ、加齢などに伴い手指の細かな運動や強い打鍵が困難になると、<strong>PCの一般的な物理キーボードやマウスの操作は極めて過酷な作業</strong>となります。</p>
+<p>一方で、当事者の多くは日常的に <strong>iPhone のタッチスクリーンや音声入力</strong> を使いこなしています。スマートフォンには、フリック入力、予測変換、アクセシビリティ対応のシステム音声認識など、優れた入力インターフェースが既に揃っています。</p>
+<h3 id="_3">本プロジェクトの狙い</h3>
+<p>PCの前に座りながら、手元の iPhone を「外付け入力サーフェス」として機能させることで：
+- <strong>打鍵の身体的負担をゼロに</strong>: タッチ画面のタップ、または高精度な音声入力で長文を作成。
+- <strong>誤送信の防止</strong>: iPhone 画面上でテキストを落ち着いて確認・推敲し、「PCへ送信」ボタンを押した瞬間に PC 側のフォーカスされたアプリ（Word、ブラウザ、チャット等）へ一括注入。
+- <strong>ショートカットの巨大ボタン化</strong>: Ctrl+C, Ctrl+V, Enter, Backspace, 保存など頻用コマンドを大きな押しやすいタイルボタンとして配置。</p>
+<hr />
+<h2 id="_4">🌟 主要機能</h2>
+<ol>
+<li><strong>iOS 標準キーボード &amp; システム音声認識 (Dictation) 連携</strong></li>
+<li>日本語かな・ローマ字、英語キーボードに対応。</li>
+<li>
+<p>iPhone のマイクに向かって話すだけで長文を即座にテキスト化し、プレビュー確認後にワンタップで PC へ一括送信。</p>
+</li>
+<li>
+<p><strong>高信頼な BLE 通信プロトコル (Chunked JSON + ACK + Retry)</strong></p>
+</li>
+<li>Wi-Fi や同一LAN、クラウドサーバーは一切不要。Bluetooth Low Energy (BLE) のみでオフライン直接通信。</li>
+<li>
+<p>パケット分割（Chunking）、シーケンス番号管理、ACK（受信応答確認）、タイムアウト自動リトライ、重複受信防止 (<code>DuplicateGuard</code>) を内蔵し、通信瞬断時も自動再接続。</p>
+</li>
+<li>
+<p><strong>カスタマイズ可能なショートカットページ &amp; プリセット管理</strong></p>
+</li>
+<li>Office、Webブラウズ、プログラミングなど用途に合わせた巨大ボタンレイアウト。</li>
+<li>
+<p>OS ごとの修飾キー（Command / Ctrl、Option / Alt）の自動マッピング。</p>
+</li>
+<li>
+<p><strong>仮想トラックパッド機能</strong></p>
+</li>
+<li>
+<p>iPhone 画面をタッチパッドとして利用し、PC のマウスポインタの相対移動、クリック、スクロールを遠隔操作。</p>
+</li>
+<li>
+<p><strong>マルチプラットフォーム PC レシーバー (Mac / Windows / Linux)</strong></p>
+</li>
+<li>Python 3.9+ ベースで動作する軽量レシーバー。</li>
+<li>OS ネイティブな入力API（macOS Accessibility API、Windows Win32 SendInput、Linux X11）を通じてフォーカス中のアプリケーションへ直接キーストロークを注入。</li>
+<li>
+<p>コマンドライン（CLI）実行および Tkinter デスクトップ GUI ウィンドウの両方に対応。</p>
+</li>
+<li>
+<p><strong>実証実験・当事者評価モード (Experiment Mode)</strong></p>
+</li>
+<li>医療・リハビリテーション・福祉工学研究での客観的評価を可能にする機能。</li>
+<li>匿名化参加者ID発行、カウンターバランス設計、所要時間・タイピング指標の計測、アンケート機能、CSV/ZIP エクスポートを完全内蔵。</li>
+</ol>
+<hr />
+<h2 id="_5">🏗️ システムアーキテクチャ</h2>
+<p>システムは、iOS 側の <strong>SwiftUI 送信アプリ</strong> と、PC 側の <strong>Python 受信・入力注入エンジン</strong> の2つの独立したコンポーネントで構成されています。</p>
+<pre class="mermaid"><code>flowchart LR
+    subgraph iOS ["iOS Application (Swift / SwiftUI)"]
+        User["ユーザー操作&lt;br&gt;(タッチ / 音声 / ボタン)"] --&gt; UI["ContentView / ShortcutStore"]
+        UI --&gt; Model["KeyboardModel / SessionManager"]
+        Model --&gt; Codec["ChunkCodec&lt;br&gt;(フレーム分割)"]
+        Codec --&gt; Peripheral["CoreBluetooth Peripheral&lt;br&gt;(GATT Server)"]
+        Model -.-&gt; Exp["ExperimentStore&lt;br&gt;(臨床データ記録)"]
+    end
+
+    Peripheral &lt;== "BLE GATT (Chunked JSON)" ==&gt; Central
+
+    subgraph PC ["PC Receiver (Python 3.9+)"]
+        Central["Bleak Central&lt;br&gt;(BLE クライアント)"] --&gt; Assembler["ChunkAssembler / MessageDecoder"]
+        Assembler --&gt; Guard["DuplicateGuard&lt;br&gt;(重複破棄キャッシュ)"]
+        Guard --&gt; Processor["MessageProcessor&lt;br&gt;(ACK 生成 &amp; 順序制御)"]
+        Processor --&gt; CmdHandler["CommandHandler"]
+        CmdHandler --&gt; Adapter["OS Input Adapter&lt;br&gt;(pynput / Win32 / macOS / X11)"]
+        Adapter --&gt; Target["フォーカス中の PC アプリ&lt;br&gt;(Word, ブラウザ, エディタ等)"]
+
+        GUI["Tkinter Desktop GUI / CLI"] --&gt; Controller["ReceiverController"]
+        Controller --&gt; Central
+    end</code></pre>
+<h3 id="_6">通信シーケンスとデータ信頼性</h3>
+<p>BLE の MTU（最大伝送単位）制限を超える長文テキストやコマンドを安全に届けるため、独自のパケット分割・再送シーケンスを実装しています：</p>
+<pre class="mermaid"><code>sequenceDiagram
+    autonumber
+    actor User as ユーザー (iPhone)
+    participant iOS as iPhone (CoreBluetooth)
+    participant PC as PC Receiver (Bleak)
+    participant OS as PC OS Input Subsystem
+
+    User-&gt;&gt;iOS: 音声入力で文章作成 &amp; [PCへ送信] タップ
+    iOS-&gt;&gt;iOS: JSON メッセージを MTU 単位のチャンクに分割 (seq, total, payload)
+    loop 各チャンク送信
+        iOS-&gt;&gt;PC: BLE Characteristic Write (Chunk)
+        PC-&gt;&gt;PC: ChunkAssembler にてバッファ蓄積
+    end
+    PC-&gt;&gt;PC: 全チャンク受信完了、JSON 復元 &amp; 整合性検証
+    PC-&gt;&gt;PC: DuplicateGuard チェック (重複チェック)
+    PC-&gt;&gt;iOS: BLE Notification (ACK: 処理完了)
+    PC-&gt;&gt;OS: テキスト / キーストロークをアクティブウィンドウへ注入
+    iOS-&gt;&gt;User: 送信完了アニメーション表示 &amp; 履歴保存</code></pre>
+<hr />
+<h2 id="_7">🛠️ 技術的挑戦と実装のポイント</h2>
+<h3 id="1-ble-mtu">1. BLE MTU 制約とフレーム再構築の堅牢性</h3>
+<p>BLE の ATT MTU はデバイスや環境により変動します。VirtualKeyboard では動的な MTU ネゴシエーションに対応し、可変長ペイロードをシーケンス番号・トータル数付きのバイナリ/JSONフレームに分割。
+パケットの順序逆転やパケットロスが発生した場合でも、バウンドされたタイムアウトと再送リクエストによって文字化けや欠落を完全に防止しています。</p>
+<h3 id="2">2. マルチプラットフォームにおける入力インジェクションの互換性</h3>
+<p>各 OS ごとに異なる入力アーキテクチャへの適応を実現：
+- <strong>macOS</strong>: Accessibility（アクセシビリティ）権限を活用した <code>CGEvent</code> / <code>pynput</code> 経由での安全なキーストローク注入。
+- <strong>Windows</strong>: <code>SendInput</code> API による管理者権限アプリやゲームにも対応可能なキーストローク合成。
+- <strong>Linux</strong>: X11 ディスプレイサーバーでの <code>xclip</code> / <code>xdotool</code> 連携。
+- クリップボードを経由する高速貼り付けモードと、直接キーコードを叩くキーストロークモードを状況に応じて使い分け。</p>
+<h3 id="3">3. 当事者ファーストのアクセシビリティ &amp; プライバシー設計</h3>
+<ul>
+<li>クラウド接続を一切行わない完全ローカル通信（機密文章や個人情報が外部に出る心配なし）。</li>
+<li>診断ログにはテキスト本文を含めず、パケットサイズやメタデータのみを記録する厳格なプライバシー配慮。</li>
+<li>福祉研究者・作業療法士（OT）が評価に使えるよう、被験者の同意取得・タスク提示・客観的データ収集を行える「Experiment Mode」を搭載。</li>
+</ul>
+<hr />
+<h2 id="_8">📊 技術スタック</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">コンポーネント</th>
+<th style="text-align: left;">技術・ライブラリ</th>
+<th style="text-align: left;">役割</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>iOS App</strong></td>
+<td style="text-align: left;">Swift 5.9+, SwiftUI</td>
+<td style="text-align: left;">タッチUI、音声認識、ショートカット編集、実験モード</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>iOS 通信</strong></td>
+<td style="text-align: left;">CoreBluetooth (Peripheral Mode)</td>
+<td style="text-align: left;">GATT サーバー、サービス/キャラクタリスティック公開</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>PC Receiver</strong></td>
+<td style="text-align: left;">Python 3.9+</td>
+<td style="text-align: left;">レシーバーコアエンジン、非同期イベントループ</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>PC 通信</strong></td>
+<td style="text-align: left;"><code>bleak</code> (asyncio)</td>
+<td style="text-align: left;">BLE セントラルクライアント、スキャン・接続・通知ハンドリング</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>入力合成</strong></td>
+<td style="text-align: left;"><code>pynput</code>, OS Native APIs</td>
+<td style="text-align: left;">キーストローク・マウスポインタの OS レベル注入</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>デスクトップ UI</strong></td>
+<td style="text-align: left;">Tkinter, Python CLI</td>
+<td style="text-align: left;">接続ステータス表示、ログビューア、GUI 操作</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>データ管理</strong></td>
+<td style="text-align: left;">JSON, 外部非依存 CSV Exporter</td>
+<td style="text-align: left;">プリセット保存、履歴管理、実験データ出力</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="aiai-orchestration">🤖 AI駆動開発における役割分担（AI-Orchestration）</h2>
+<p>本システムは、iOS（SwiftUI / CoreBluetooth）とクロスプラットフォームPC（Python / bleak / pynput）という異種環境間のBLE連携を、<strong>自律型AI協調開発（AI-Driven Development）</strong> により迅速にプロトタイピング・実装しました。</p>
+<hr />
+<h2 id="emdash-web-virtual_keyboard_with_iphone-web">🌐 Emdash による広報・製品紹介Webサイト (<a href="file:///app/virtual_keyboard_with_iphone-web"><code>virtual_keyboard_with_iphone-web</code></a>)</h2>
+<p>福祉現場や上肢障害当事者、作業療法士（OT）に本システムの利便性と導入ステップをわかりやすく届けるため、<strong>Emdash</strong> を基盤とした専用の製品紹介・LPサイトを構築しています。</p>
+<pre class="mermaid"><code>flowchart LR
+    A["Emdash Web基盤\n(HTML/CSS/JS + SVG)"] --&gt;|アクセシブルデザイン| B["製品紹介LP\n(virtual_keyboard_with_iphone-web)"]
+    B --&gt;|オフラインBLEの安心感訴求| C["当事者 / 介助者 / 作業療法士 (OT)"]</code></pre>
+<h3 id="web">広報Webサイトの特徴</h3>
+<ul>
+<li><strong>アクセシビリティ最優先のビジュアル設計</strong>:</li>
+<li>見やすいフォント、高コントラストなカラーリング、SVGベクターアイコン群（<code>virtualkeyboard-icon.svg</code>, <code>og-virtualkeyboard.svg</code>）。</li>
+<li><strong>「クラウド不要・BLEダイレクト接続」の安心感訴求</strong>:</li>
+<li>個人情報や入力文字がインターネットを一切経由しない強みをグラフィカルに明示。</li>
+<li><strong>導入3ステップガイド</strong>:</li>
+<li>iPhoneアプリの起動 → PCレシーバーの待機 → BLEペアリング完了までの流れを直感的に案内。</li>
+</ul>
+<hr />
+<h2 id="aiai-orchestration_1">🤖 AI駆動開発における役割分担（AI-Orchestration）</h2>
+<p>本プロジェクトは、iOS CoreBluetooth と Python デスクトップ環境を横断する複雑なプロトコル設計と、Emdash 広報 Web の構築を、<strong>自律型AI協調開発（AI-Driven Development）</strong> により実現しました。</p>
+<ul>
+<li><strong>自身が担当した領域（福祉ドメイン設計・プロトコル要件・検証）:</strong></li>
+<li>10年以上のNPO知見に基づく当事者UIのアクセシビリティ要件定義（巨大ボタン、誤送信防止プレビュー、音声確定ワークフロー）</li>
+<li>パケット分割（Chunking）、シーケンス番号、ACK応答確認、タイムアウト再送による通信途絶対策のプロトコル要件設計</li>
+<li>被験者評価を可能にする「臨床実験モード（Experiment Mode）」のタスク設計・同意取得フロー</li>
+<li>複数OS（macOS / Windows / Linux）での実機BLE接続テストと操作性チューニング</li>
+<li>Emdash 広報 Web のコンテンツ方針（安心感・医療現場での信頼性）の策定</li>
+<li><strong>AIが加速した領域（高速プロトタイピング・コード生成）:</strong></li>
+<li>iOS CoreBluetooth Peripheral（GATTサーバー）および Python <code>bleak</code> セントラルの通信ボイラープレート生成</li>
+<li><code>pynput</code> を用いたOS別修飾キーマッピングと入力インジェクションロジックの実装</li>
+<li>Tkinter によるPCレシーバー設定画面のGUI構築</li>
+<li>Emdash Web サイトのレスポンシブ CSS レイアウト（<code>styles.css</code>）と動的スクリプトの自動生成</li>
+</ul>
+<hr />
+<h2 id="_9">🔗 関連リンク &amp; 配布</h2>
+<ul>
+<li><strong>ネイティブアプリリポジトリ</strong>: <a href="file:///app/virtual_keyboard_with_iphone"><code>virtual_keyboard_with_iphone</code></a></li>
+<li><strong>Emdash広報Webサイト</strong>: <a href="file:///app/virtual_keyboard_with_iphone-web"><code>virtual_keyboard_with_iphone-web</code></a></li>
+<li><strong>詳細ドキュメント</strong>: システム仕様書 (<code>docs/specification.md</code>), アーキテクチャ設計書 (<code>docs/architecture.md</code>)</li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            ページトップへ戻る
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.tracking", "search.suggest", "search.highlight", "content.code.copy", "navigation.indexes", "navigation.tags", "content.action.edit", "content.action.view"], "search": "../../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version": "\u30d0\u30fc\u30b8\u30e7\u30f3\u5207\u308a\u66ff\u3048"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.4e0fa4ba.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../javascripts/katex.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      
+    
+  </body>
+</html>

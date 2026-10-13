@@ -1,0 +1,1182 @@
+
+<!doctype html>
+<html lang="ja" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../food-store-finder/">
+      
+      
+        <link rel="next" href="../myo-link/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.4.0">
+    
+    
+      
+        <title>思い出の窓 (Memory Window) — 白黒線画で描く遠隔見守り・対話支援 Web/PWA - GooBitGitKome's Portfolio</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.9f615399.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.649f08f9.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#memory-window" class="md-skip">
+          コンテンツにスキップ
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="ヘッダー">
+    <a href="../.." title="GooBitGitKome&#39;s Portfolio" class="md-header__button md-logo" aria-label="GooBitGitKome's Portfolio" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            GooBitGitKome's Portfolio
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              思い出の窓 (Memory Window) — 白黒線画で描く遠隔見守り・対話支援 Web/PWA
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="検索" placeholder="検索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="検索">
+        
+        <button type="reset" class="md-search__icon md-icon" title="クリア" aria-label="クリア" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            検索を初期化
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="タブ" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+    
+  
+  Projects
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Optimization/Genetic%20Algorithm%20in%20Python/" class="md-tabs__link">
+          
+  
+    
+  
+  Optimization
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../tag_list/" class="md-tabs__link">
+        
+  
+    
+  
+  Tag List
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="ナビゲーション" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="GooBitGitKome&#39;s Portfolio" class="md-nav__button md-logo" aria-label="GooBitGitKome's Portfolio" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    GooBitGitKome's Portfolio
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Projects
+  </span>
+  
+
+            </a>
+            
+              <label class="md-nav__link " for="__nav_2">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Projects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../outdoor-cast/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OutdoorCast
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../personal-kakeibo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Personal Kakeibo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../food-store-finder/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Food Store Finder
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    思い出の窓 (Memory Window)
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    思い出の窓 (Memory Window)
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    💡 開発背景と解決課題
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    🌟 主要機能
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    🏗️ システムアーキテクチャ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    🛡️ プライバシー &amp; セキュリティ設計
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ai-ai-driven-development" class="md-nav__link">
+    🤖 AI駆動開発 (AI-Driven Development) における実践
+  </a>
+  
+    <nav class="md-nav" aria-label="🤖 AI駆動開発 (AI-Driven Development) における実践">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vs-ai" class="md-nav__link">
+    役割分担（人間の意思決定 vs AIの高速化）
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    📊 技術スタック
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    🔗 ディレクトリ &amp; 関連リンク
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../myo-link/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MyoLink
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../app-audio-router/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AppAudioRouter
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../virtual-keyboard/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VirtualKeyboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Optimization
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Optimization
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Optimization/Genetic%20Algorithm%20in%20Python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    遺伝的アルゴリズム (GA)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Optimization/Latin%20Hypercube%20Sampling%20%28LHS%29%20%E3%81%AE%E7%90%86%E8%AB%96%E3%81%A8%E6%9C%89%E7%94%A8%E6%80%A7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Latin Hypercube Sampling (LHS)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tag_list/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tag List
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    💡 開発背景と解決課題
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    🌟 主要機能
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    🏗️ システムアーキテクチャ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    🛡️ プライバシー &amp; セキュリティ設計
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ai-ai-driven-development" class="md-nav__link">
+    🤖 AI駆動開発 (AI-Driven Development) における実践
+  </a>
+  
+    <nav class="md-nav" aria-label="🤖 AI駆動開発 (AI-Driven Development) における実践">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vs-ai" class="md-nav__link">
+    役割分担（人間の意思決定 vs AIの高速化）
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    📊 技術スタック
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    🔗 ディレクトリ &amp; 関連リンク
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+<nav class="md-tags" >
+  
+    
+    
+    
+      <a href="../../tag_list/#react" class="md-tag">React</a>
+    
+  
+    
+    
+    
+      <a href="../../tag_list/#typescript" class="md-tag">TypeScript</a>
+    
+  
+    
+    
+    
+      <a href="../../tag_list/#vite" class="md-tag">Vite</a>
+    
+  
+    
+    
+    
+      <a href="../../tag_list/#pwa" class="md-tag">PWA</a>
+    
+  
+    
+    
+    
+      <a href="../../tag_list/#supabase" class="md-tag">Supabase</a>
+    
+  
+    
+    
+    
+      <a href="../../tag_list/#postgresql" class="md-tag">PostgreSQL</a>
+    
+  
+    
+    
+    
+      <a href="../../tag_list/#webrtc" class="md-tag">WebRTC</a>
+    
+  
+    
+    
+    
+      <a href="../../tag_list/#openai-realtime" class="md-tag">OpenAI Realtime</a>
+    
+  
+    
+    
+    
+      <a href="../../tag_list/#capacitor" class="md-tag">Capacitor</a>
+    
+  
+    
+    
+    
+      <a href="../../tag_list/#accessibility" class="md-tag">Accessibility</a>
+    
+  
+    
+    
+    
+      <a href="../../tag_list/#ai-driven-development" class="md-tag">ai-driven-development</a>
+    
+  
+</nav>
+
+
+
+<h1 id="memory-window">思い出の窓 (Memory Window)</h1>
+<div align="center">
+  <img src="./assets/memory-window/weather-window-preview.png" alt="Weather Window Preview" width="540" style="border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.15); margin-bottom: 12px;" />
+  <h3>白黒線画の窓の向こうに、静かな小さな暮らしを描く遠隔見守り・生活リズム・対話支援システム</h3>
+</div>
+
+<div align="center" class="project-badges">
+<p><code>React 18</code> <code>TypeScript</code> <code>Vite (PWA)</code> <code>Monorepo (npm workspaces)</code> <code>packages/core (Pure Domain)</code> <code>Zod (api-contracts)</code> <code>Supabase Edge Functions</code> <code>PostgreSQL (RLS)</code> <code>WebRTC Audio</code> <code>Capacitor</code> <code>AI駆動開発</code></p>
+</div>
+<p><br></p>
+<blockquote>
+<p><strong>「監視カメラではなく、温かな窓の向こうの生活リズムとして見守る」</strong><br />
+一人暮らしの高齢者や支援を必要とする当事者のプライバシーを最大限に尊重し、白黒線画の窓とキャラクターのアニメーションを通して、生活リズムの確認、AI音声対話、そして同意に基づく支援者共有を実現するWeb/PWAアプリケーションです。<br />
+会話音声や全文を永続保存しないゼロ・リテンション設計と、厳格なRow Level Security (RLS) により、最高水準の医療福祉・プライバシーセキュリティを担保しています。</p>
+</blockquote>
+<hr />
+<h2 id="_1">💡 開発背景と解決課題</h2>
+<p>遠隔見守りや介護支援の現場において、以下のような深刻なジレンマが存在していました：</p>
+<ol>
+<li><strong>監視カメラに対する強い心理的抵抗感</strong>:</li>
+<li>自宅内にカメラを設置されることはプライバシーの侵害と感じられ、当事者が強い拒否感やストレスを抱く。</li>
+<li><strong>通話・対話のハードルの高さ</strong>:</li>
+<li>スマートフォンの操作やビデオ通話は身体的・認知的な負荷が高く、日常的なコミュニケーションが途絶えがちになる。</li>
+<li><strong>生活困りごとの把握とプライバシーの摩擦</strong>:</li>
+<li>「電球が切れた」「買い物がつらい」といった生活ニーズが家族や支援者に伝わりにくい一方、何でも筒抜けになることへの警戒感がある。</li>
+</ol>
+<p><strong>思い出の窓（Memory Window）</strong> は、<strong>「線画の窓をノックするだけ」</strong> という極めて直感的な身体操作と、<strong>「本人が明示的に同意した困りごと項目だけを支援者へ共有する版管理機構」</strong> によって、尊厳を守りながら孤立を防ぐ新しい見守り体験を形にしました。</p>
+<hr />
+<h2 id="_2">🌟 主要機能</h2>
+<div align="center">
+  <img src="./assets/memory-window/generated-scene-preview.png" alt="Generated Scene Preview" width="480" style="border-radius: 12px; margin: 16px 0;" />
+</div>
+
+<ol>
+<li><strong>線画の窓と生活リズムの可視化</strong>:</li>
+<li>朝・昼・夕・夜のローカル時刻に連動し、窓の中のキャラクターが読書・食事・休息などの日常動作を行う。</li>
+<li>室内画像のガラス越しに、外の天候（雨・雪・晴れ・曇り）がリアルタイムに描画される。</li>
+<li><strong>直感的なノックインタラクション</strong>:</li>
+<li>窓を2回タップ（設定で1回タップに変更可能）または Enter/Space でノックすると、キャラクターが振り向いて手を振り、時間帯に応じた固定挨拶を話しかける。</li>
+<li><strong>WebRTC によるリアルタイム AI 音声対話</strong>:</li>
+<li>OpenAI Realtime API を活用した自然な音声会話。マイクに向かって話しかけるだけで、低レイテンシな双方向会話が可能。</li>
+<li><strong>ゼロ・リテンション</strong>: 会話全文や生音声をサーバーDBへ永続保存せず、プライバシーを完全保護。</li>
+<li><strong>生活ニーズ抽出 &amp; 版付き同意による支援者共有</strong>:</li>
+<li>会話の中から「電球の交換」「買い物代行」などの困りごと候補をルールベースで提示。</li>
+<li>利用者本人が内容を確認して非公開保存。招待コードで結ばれた支援者に対し、<strong>本人が明示的に同意した項目だけ</strong>が閲覧可能になる。</li>
+<li>編集・撤回・削除も本人の意思でいつでも即座に実行可能。</li>
+<li><strong>BYOK (Bring Your Own Key) &amp; AES-GCM 暗号化</strong>:</li>
+<li>利用者独自のAPIキーを使用可能。サーバー側で利用者ごとに AES-GCM 暗号化して保管し、ブラウザには平文キーを返却しない。</li>
+</ol>
+<hr />
+<h2 id="_3">🏗️ システムアーキテクチャ</h2>
+<p>単一の責務に閉じた npm workspaces モノレポ構造を採用し、ビジネスルールを UI フレームワークから完全に独立させています。</p>
+<pre class="mermaid"><code>flowchart TD
+    subgraph Client["クライアント層 (React 18 + Vite PWA / Capacitor)"]
+        SCENE["Presentation\n(WindowScene / scene.css / 天候透過)"]
+        HOOKS["Application Hooks\n(useWindow / useConversation / useWeather)"]
+        SERVICES["Web Services\n(Supabase Client / WebRTC / Open-Meteo)"]
+    end
+
+    subgraph Core["共通パッケージ (npm workspaces)"]
+        DOMAIN["packages/core\n(時間帯・人物・天候・会話・同意判定の純粋関数)"]
+        CONTRACTS["packages/api-contracts\n(Zod APIリクエスト/レスポンススキーマ)"]
+    end
+
+    subgraph Backend["バックエンド (Supabase Edge Functions / Deno)"]
+        API["Edge Function: memory-window\n(認証・AES-GCM復号・認可・セッション制御)"]
+        STRIPE_HOOK["Edge Function: stripe-webhook\n(署名検証・契約照合)"]
+    end
+
+    subgraph External["外部サービス &amp; インフラ"]
+        OPENAI["OpenAI Realtime API\n(WebRTC 双方向音声対話)"]
+        METEO["Open-Meteo API\n(座標0.1度丸め・天候コード)"]
+        DB[(PostgreSQL\n厳格なRow Level Security)]
+    end
+
+    SCENE --&gt; HOOKS
+    HOOKS --&gt; DOMAIN
+    HOOKS --&gt; SERVICES
+    SERVICES --&gt; CONTRACTS
+    SERVICES --&gt;|WebRTC 音声| OPENAI
+    SERVICES --&gt;|天候取得| METEO
+    SERVICES --&gt;|Bearer Token + Zod| API
+    API --&gt; CONTRACTS
+    API --&gt; DB
+    API --&gt;|BYOK SDP交換| OPENAI
+    STRIPE_HOOK --&gt; DB</code></pre>
+<hr />
+<h2 id="_4">🛡️ プライバシー &amp; セキュリティ設計</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">項目</th>
+<th style="text-align: left;">実装方針</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>会話音声・テキスト</strong></td>
+<td style="text-align: left;">アプリDBには永続保存しない。一時的セッション終了とともに完全破棄。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>APIキー保管</strong></td>
+<td style="text-align: left;">サーバー側で利用者別に AES-GCM 暗号化（<code>encrypted_api_keys</code>）。マスター暗号鍵はサーバー秘密環境変数に分離。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>支援者共有データ</strong></td>
+<td style="text-align: left;"><code>needs</code> と <code>consent_events</code> テーブル。所有者判定、版付き同意、有効な支援者権限（RLS）がすべて揃った場合のみ返却。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>位置情報・天候</strong></td>
+<td style="text-align: left;">端末の現在地座標は 0.1 度（約11km四方）へ丸め、画面メモリ上のみに保持。DBへは一切保存しない。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>支援者招待</strong></td>
+<td style="text-align: left;">招待コードはハッシュ化保存（<code>care_invites</code>）。24時間有効期限かつ1回限定使用。</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="ai-ai-driven-development">🤖 AI駆動開発 (AI-Driven Development) における実践</h2>
+<p>本プロジェクトは、ソフトウェア要求仕様書（SRS v2.0）に基づく段階的リリース計画（Phase 0〜7）を、AI コーディングエージェントとの協調により体系的に完遂させました。</p>
+<h3 id="vs-ai">役割分担（人間の意思決定 vs AIの高速化）</h3>
+<ul>
+<li><strong>自身が担当した領域（福祉工学ドメイン・倫理設計・アーキテクチャ）:</strong></li>
+<li>「カメラによる監視ではなく、アニメーションとノックによる生活気配の伝達」という基本コンセプトの定義</li>
+<li>本人の自己決定権を守るための「版付き同意（Consent Events）と項目単位の共有制御」の仕様設計</li>
+<li>OpenAI Realtime の費用上限・利用時間制限（日次1800秒上限等）の安全弁設計</li>
+<li><strong>AIが加速した領域（型定義・純粋関数・自動テスト）:</strong></li>
+<li>UIに依存しないドメインロジック（<code>packages/core</code>）の TDD（テスト駆動開発）実装</li>
+<li>Zod スキーマ（<code>packages/api-contracts</code>）によるフロント・バックエンド間の型安全性の完全自動保証</li>
+<li>Deno 環境における Edge Functions の型チェック（<code>deno check</code>）と単体テストの自動化</li>
+<li>Playwright E2E テストによるノック・会話・同意・支援者切り替えシナリオの網羅</li>
+</ul>
+<hr />
+<h2 id="_5">📊 技術スタック</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">分類</th>
+<th style="text-align: left;">技術 / ライブラリ</th>
+<th style="text-align: left;">バージョン / 詳細</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>フロントエンド</strong></td>
+<td style="text-align: left;">React 18, TypeScript, Vite</td>
+<td style="text-align: left;">PWA 対応、レスポンシブ CSS アニメーション</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>モノレポ管理</strong></td>
+<td style="text-align: left;">npm workspaces</td>
+<td style="text-align: left;"><code>apps/web</code>, <code>packages/core</code>, <code>packages/api-contracts</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>ドメインロジック</strong></td>
+<td style="text-align: left;">Pure TypeScript (<code>packages/core</code>)</td>
+<td style="text-align: left;">外部SDK非依存、100%単体テスト可能</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>スキーマバリデーション</strong></td>
+<td style="text-align: left;">Zod (<code>packages/api-contracts</code>)</td>
+<td style="text-align: left;">クライアント / サーバー間契約の共通化</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>バックエンド / DB</strong></td>
+<td style="text-align: left;">Supabase Edge Functions, PostgreSQL</td>
+<td style="text-align: left;">Deno 2.9+, Row Level Security (RLS)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>リアルタイム通信</strong></td>
+<td style="text-align: left;">WebRTC, OpenAI Realtime API</td>
+<td style="text-align: left;">双方向低遅延音声対話</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>モバイル対応</strong></td>
+<td style="text-align: left;">Capacitor</td>
+<td style="text-align: left;">iOS / Android ネイティブコンテナ同期</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>テスト</strong></td>
+<td style="text-align: left;">Vitest, Deno Test, Playwright</td>
+<td style="text-align: left;">E2E および単体・結合テスト自動化</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_6">🔗 ディレクトリ &amp; 関連リンク</h2>
+<ul>
+<li><strong>リポジトリ</strong>: <a href="file:///app/memory-window"><code>memory-window</code></a></li>
+<li><strong>システムアーキテクチャ仕様書</strong>: <a href="file:///app/memory-window/docs/architecture/system-architecture.md">システムアーキテクチャ仕様書</a></li>
+<li><strong>実サービス接続と安全設定</strong>: <a href="file:///app/memory-window/docs/operations/connected-services.md">実接続手順書</a></li>
+<li><strong>全フェーズ計画書</strong>: <a href="file:///app/memory-window/docs/specifications/all-phases-plan.md">SRS v2.0 フェーズ対応仕様書</a></li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            ページトップへ戻る
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.tracking", "search.suggest", "search.highlight", "content.code.copy", "navigation.indexes", "navigation.tags", "content.action.edit", "content.action.view"], "search": "../../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version": "\u30d0\u30fc\u30b8\u30e7\u30f3\u5207\u308a\u66ff\u3048"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.4e0fa4ba.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../javascripts/katex.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      
+    
+  </body>
+</html>
